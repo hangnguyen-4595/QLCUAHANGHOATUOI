@@ -52,7 +52,7 @@
             this.lblLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogin.Location = new System.Drawing.Point(984, 268);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(292, 52);
+            this.lblLogin.Size = new System.Drawing.Size(286, 51);
             this.lblLogin.TabIndex = 7;
             this.lblLogin.Text = "ĐĂNG NHẬP";
             this.lblLogin.Click += new System.EventHandler(this.lblLogin_Click);
@@ -102,6 +102,7 @@
             this.txtTaikhoan.SelectedText = "";
             this.txtTaikhoan.Size = new System.Drawing.Size(340, 64);
             this.txtTaikhoan.TabIndex = 10;
+            this.txtTaikhoan.TextChanged += new System.EventHandler(this.txtTaikhoan_TextChanged);
             // 
             // txtMatkhau
             // 

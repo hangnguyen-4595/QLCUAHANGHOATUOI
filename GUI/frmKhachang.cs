@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,16 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using QLCUAHANGHOATUOI;
+
 namespace QLCUAHANGHOATUOI.GUI
 {
     public partial class frmKhachang : Form
     {
-        string connStr =
-        @"Data Source=(LocalDB)\MSSQLLocalDB;
-        AttachDbFilename=C:\Users\DELL\Documents\dbCuaHangHoaTuoi.mdf;
-        Integrated Security=True;
-        Connect Timeout=30 ";
-
         public frmKhachang()
         {
             InitializeComponent();
@@ -51,7 +47,7 @@ namespace QLCUAHANGHOATUOI.GUI
         }
         private void LoadDataFromDB()
         {
-            using (SqlConnection conn = new SqlConnection(connStr))
+            using (SqlConnection conn = DatabaseConnection.GetConnection())
             {
                 string sql = "SELECT * FROM KhachHang";
 
@@ -70,7 +66,7 @@ namespace QLCUAHANGHOATUOI.GUI
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(connStr))
+                using (SqlConnection conn = DatabaseConnection.GetConnection())
                 {
                     conn.Open();
 

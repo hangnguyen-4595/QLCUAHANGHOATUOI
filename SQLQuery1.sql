@@ -1,1 +1,60 @@
-﻿
+﻿-- CREATE DATABASE dbCuaHangHoaTuoi;
+-- GO
+-- USE dbCuaHangHoaTuoi;
+-- GO
+
+-- 1. Table NhanVien
+CREATE TABLE NhanVien (
+    MaNV VARCHAR(50) PRIMARY KEY,
+    HoTen NVARCHAR(100) NOT NULL,
+    GioiTinh NVARCHAR(10),
+    NgaySinh DATE,
+    SoDienThoai VARCHAR(20),
+    DiaChi NVARCHAR(250),
+    NgayVaoLam DATETIME DEFAULT GETDATE()
+);
+
+-- 2. Table TaiKhoan
+CREATE TABLE TaiKhoan (
+    MaTK VARCHAR(50) PRIMARY KEY,
+    MaNV VARCHAR(50) FOREIGN KEY REFERENCES NhanVien(MaNV),
+    TenDangNhap VARCHAR(50) NOT NULL UNIQUE,
+    MatKhau VARCHAR(50) NOT NULL,
+    VaiTro NVARCHAR(50)
+);
+
+-- 3. Table KhachHang
+CREATE TABLE KhachHang (
+    MaKH VARCHAR(50) PRIMARY KEY,
+    HoTen NVARCHAR(100) NOT NULL,
+    SoDienThoai VARCHAR(20),
+    DiaChi NVARCHAR(250)
+);
+
+-- 4. Table SanPham
+CREATE TABLE SanPham (
+    MaSP VARCHAR(50) PRIMARY KEY,
+    TenSP NVARCHAR(100) NOT NULL,
+    MauSac NVARCHAR(50),
+    GiaBan DECIMAL(18, 2) NOT NULL,
+    SoLuong INT NOT NULL,
+    TrangThai NVARCHAR(50)
+);
+
+-- 5. Table HoaDon
+CREATE TABLE HoaDon (
+    MaHD VARCHAR(50) PRIMARY KEY,
+    MaKH VARCHAR(50) FOREIGN KEY REFERENCES KhachHang(MaKH),
+    MaNV VARCHAR(50) FOREIGN KEY REFERENCES NhanVien(MaNV),
+    NgayLap DATETIME DEFAULT GETDATE(),
+    TongTien DECIMAL(18, 2)
+);
+
+-- 6. Table ChiTietHoaDon
+CREATE TABLE ChiTietHoaDon (
+    MaHD VARCHAR(50) FOREIGN KEY REFERENCES HoaDon(MaHD),
+    MaSP VARCHAR(50) FOREIGN KEY REFERENCES SanPham(MaSP),
+    SoLuong INT NOT NULL,555555555555555
+    DonGia DECIMAL(18, 2) NOT NULL,
+    PRIMARY KEY (MaHD, MaSP)
+);
