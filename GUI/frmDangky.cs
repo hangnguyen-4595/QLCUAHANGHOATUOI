@@ -45,7 +45,7 @@ namespace QLCUAHANGHOATUOI.GUI
             cboGioitinh.Items.Add("Nữ");
             
             cboVaitro.Items.Add("Nhân viên bán hàng");
-            cboVaitro.Items.Add("Nhân viên kho");
+            cboVaitro.Items.Add("Nhân viên chăm sóc hoa");
 
             cboGioitinh.SelectedIndex = 0;
             cboVaitro.SelectedIndex = 0;
@@ -120,11 +120,11 @@ namespace QLCUAHANGHOATUOI.GUI
         }
         private void frmLoadDangky(object sender, EventArgs e)
         {
-            cboGioitinh.Items.Add("Nam");
             cboGioitinh.Items.Add("Nữ");
-
+            cboGioitinh.Items.Add("Nam");
+            cboVaitro.Items.Add("Nhân viên giao hàng");
             cboVaitro.Items.Add("Nhân viên bán hàng");
-            cboVaitro.Items.Add("Nhân viên kho");
+            cboVaitro.Items.Add("Nhân viên chăm sóc hoa");
 
             cboGioitinh.SelectedIndex = 0;
             cboVaitro.SelectedIndex = 0;

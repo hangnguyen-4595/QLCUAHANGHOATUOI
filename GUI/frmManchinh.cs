@@ -13,37 +13,10 @@ namespace QLCUAHANGHOATUOI.GUI
     public partial class frmManchinh : Form
     {
         public frmManchinh()
-        {
+        {            
             InitializeComponent();
-            dtpNgaythang.Text = DateTime.Now.ToString("dd/MM/yyyy");
         }
 
-        private void btnSanpham_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-        private void btnTrangchu_Click(object sender, EventArgs e)
-        {
-            frmTrangchu frm = new frmTrangchu();
-            frm.ShowDialog();
-        }
-
-        private void btnSanpham_Click_1(object sender, EventArgs e)
-        {
-            frmSanpham frm = new frmSanpham();
-            frm.ShowDialog();
-        }
-
-        private void btnTaikhoan_Click(object sender, EventArgs e)
-        {
-            frmTaikhoan frm = new frmTaikhoan();
-            frm.ShowDialog();
-        }
 
 
         private void btnDangxuat_Click(object sender, EventArgs e)
@@ -67,15 +40,21 @@ namespace QLCUAHANGHOATUOI.GUI
 
         }
 
-        private void btnNhanvien_Click(object sender, EventArgs e)
+
+        private void pnlXinchao_Paint(object sender, PaintEventArgs e)
         {
-            frmQLNV frm = new frmQLNV();
 
-            this.Hide();
-
-            frm.ShowDialog();
-
-            this.Show();
         }
+
+        private void pnlLogo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2Panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
     }
 }

@@ -51,14 +51,12 @@ namespace QLCUAHANGHOATUOI.GUI
             }
             if (username == "admin" && password == "123")
             {
-                MessageBox.Show("Đăng nhập thành công!");
                 frmManchinh frm = new frmManchinh();
                 frm.Show();
                 this.Hide();
             }
-            else if (username == "admin1" && password == "1234")
+            else if (username == "user1" && password == "1234")
             {
-                MessageBox.Show("Đăng nhập thành công!");
                 frmNhanvien frm = new frmNhanvien();
                 frm.Show();
                 this.Hide();
@@ -72,6 +70,16 @@ namespace QLCUAHANGHOATUOI.GUI
         }
 
         private void frmDangnhap_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
