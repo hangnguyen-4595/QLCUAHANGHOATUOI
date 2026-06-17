@@ -1,4 +1,4 @@
-﻿namespace QLCUAHANGHOATUOI.GUI
+namespace QLCUAHANGHOATUOI.GUI
 {
     partial class frmManchinh
     {
@@ -255,6 +255,7 @@
             this.btnThongke.Size = new System.Drawing.Size(218, 45);
             this.btnThongke.TabIndex = 7;
             this.btnThongke.Text = "Thống kê";
+            this.btnThongke.Click += new System.EventHandler(this.btnThongke_Click);
             // 
             // btnBanhang
             // 
@@ -274,6 +275,7 @@
             this.btnBanhang.Size = new System.Drawing.Size(218, 45);
             this.btnBanhang.TabIndex = 5;
             this.btnBanhang.Text = "Lịch sử đơn hàng";
+            this.btnBanhang.Click += new System.EventHandler(this.btnBanhang_Click);
             // 
             // btnSanpham
             // 

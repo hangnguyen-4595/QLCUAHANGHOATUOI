@@ -130,6 +130,9 @@
     <Compile Include="GUI\KhachHangManager.cs" />
     <Compile Include="GUI\SanPhamManager.cs" />
     <Compile Include="GUI\TaiKhoanManager.cs" />
+    <Compile Include="DatabaseConnection.cs" />
+    <Compile Include="GUI\frmThanhToan.cs" />
+    <Compile Include="GUI\frmInHoaDon.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UC_QLSP\UC_QLSP.cs">

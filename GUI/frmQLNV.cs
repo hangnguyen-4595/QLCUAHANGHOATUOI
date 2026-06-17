@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,15 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using QLCUAHANGHOATUOI;
+
 namespace QLCUAHANGHOATUOI.GUI
 {
     public partial class frmQLNV : Form
     {
-        string connStr =
-        @"Data Source=(LocalDB)\MSSQLLocalDB;
-            AttachDbFilename=C:\Users\DELL\Documents\dbCuaHangHoaTuoi.mdf;
-            Integrated Security=True;
-            Connect Timeout=30";
         public frmQLNV()
         {
             InitializeComponent();
@@ -34,7 +31,7 @@ namespace QLCUAHANGHOATUOI.GUI
         }
         private void LoadNhanVien()
         {
-            using (SqlConnection conn = new SqlConnection(connStr))
+            using (SqlConnection conn = DatabaseConnection.GetConnection())
             {
                 string sql = "SELECT * FROM NhanVien";
 
@@ -66,7 +63,7 @@ namespace QLCUAHANGHOATUOI.GUI
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(connStr))
+                using (SqlConnection conn = DatabaseConnection.GetConnection())
                 {
                     conn.Open();
 
