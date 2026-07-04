@@ -1,19 +1,14 @@
-﻿
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlTypes;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
+using QLCUAHANGHOATUOI.Database; 
 
 namespace QLCUAHANGHOATUOI.GUI
 {
     public partial class frmDangnhap : Form
     {
+      
+        private readonly TaiKhoanDB taiKhoanDB = new TaiKhoanDB();
+
         public frmDangnhap()
         {
             InitializeComponent();
@@ -24,6 +19,7 @@ namespace QLCUAHANGHOATUOI.GUI
             frmDangky frm = new frmDangky();
             frm.ShowDialog();
         }
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             ThucHienDangNhap();
@@ -39,6 +35,7 @@ namespace QLCUAHANGHOATUOI.GUI
             string username = txtTaikhoan.Text.Trim();
             string password = txtMatkhau.Text.Trim();
 
+            
             if (string.IsNullOrEmpty(username))
             {
                 MessageBox.Show("Vui lòng nhập tên đăng nhập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -52,28 +49,35 @@ namespace QLCUAHANGHOATUOI.GUI
                 return;
             }
 
-            if (username == "admin" && password == "123")
+           
+            string quyenTruyCap = "";
+            if (taiKhoanDB.KiemTraDangNhap(username, password, out quyenTruyCap))
             {
-       
-                frmManchinh frm = new frmManchinh();
-                frm.Show();
-                this.Hide();
-            }
-    
-            else if (username == "user1" && password == "1234")
-            {
-      
-                frmNhanvien frm = new frmNhanvien();
-                frm.Show();
-                this.Hide();
+                MessageBox.Show($"Đăng nhập thành công với quyền: {quyenTruyCap}!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+              
+                if (quyenTruyCap == "Quản lý")
+                {
+                    frmManchinh frm = new frmManchinh();
+                    frm.Show();
+                }
+                else if (quyenTruyCap == "Nhân viên")
+                {
+                    frmNhanvien frm = new frmNhanvien();
+                    frm.Show();
+                }
+
+                this.Hide(); 
             }
             else
             {
+                
                 MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtMatkhau.Clear();
                 txtMatkhau.Focus();
             }
         }
+
         private void guna2CircleButton1_Click(object sender, EventArgs e) { }
         private void lblLogin_Click(object sender, EventArgs e) { }
         private void frmDangnhap_Load(object sender, EventArgs e) { }

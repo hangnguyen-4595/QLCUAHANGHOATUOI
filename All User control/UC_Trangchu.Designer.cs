@@ -1,4 +1,4 @@
-﻿namespace QLCUAHANGHOATUOI.All_User_control
+﻿namespace QLCUAHANGHOATUOI.GUI
 {
     partial class UC_Trangchu
     {
@@ -34,10 +34,10 @@
             System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Trangchu));
             this.pnlHomnay = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblDonHang = new System.Windows.Forms.Label();
+            this.lblDoanhThu = new System.Windows.Forms.Label();
             this.lblSodonhang = new System.Windows.Forms.Label();
-            this.lblSodoanhthu = new System.Windows.Forms.Label();
-            this.lblDonhang = new System.Windows.Forms.Label();
-            this.lblDoanhthu = new System.Windows.Forms.Label();
+            this.lblDoanhthunay = new System.Windows.Forms.Label();
             this.lblHomnay = new System.Windows.Forms.Label();
             this.pnlCanhbao = new Guna.UI2.WinForms.Guna2Panel();
             this.lblSoluonghet = new System.Windows.Forms.Label();
@@ -46,40 +46,40 @@
             this.lblSaphet = new System.Windows.Forms.Label();
             this.lblCanhbao = new System.Windows.Forms.Label();
             this.pnlHoatdong = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblSoluongdon = new System.Windows.Forms.Label();
+            this.lblDonDangXuLy = new System.Windows.Forms.Label();
             this.lblDonxuli = new System.Windows.Forms.Label();
             this.lblHoatdong = new System.Windows.Forms.Label();
-            this.chrXuhuongban = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartXuHuong = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pnlMauhoa = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlHoa4 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblGialanghoa = new System.Windows.Forms.Label();
             this.lblLanghoa = new System.Windows.Forms.Label();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnlHoa3 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblGiasophia = new System.Windows.Forms.Label();
             this.lblSophia = new System.Windows.Forms.Label();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnlHoa2 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblGiahuongduong = new System.Windows.Forms.Label();
             this.lblTenbohoa = new System.Windows.Forms.Label();
+            this.ptbHoahuongduong = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnlHoa1 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblGiasinhnhat = new System.Windows.Forms.Label();
             this.lblTengiohoa = new System.Windows.Forms.Label();
-            this.lblMauhoaban = new System.Windows.Forms.Label();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.ptbHoahuongduong = new Guna.UI2.WinForms.Guna2PictureBox();
             this.ptbGiohoa = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.lblMauhoaban = new System.Windows.Forms.Label();
             this.pnlHomnay.SuspendLayout();
             this.pnlCanhbao.SuspendLayout();
             this.pnlHoatdong.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chrXuhuongban)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartXuHuong)).BeginInit();
             this.pnlMauhoa.SuspendLayout();
             this.pnlHoa4.SuspendLayout();
-            this.pnlHoa3.SuspendLayout();
-            this.pnlHoa2.SuspendLayout();
-            this.pnlHoa1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            this.pnlHoa3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            this.pnlHoa2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbHoahuongduong)).BeginInit();
+            this.pnlHoa1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbGiohoa)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,56 +90,57 @@
             this.pnlHomnay.BorderRadius = 18;
             this.pnlHomnay.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.pnlHomnay.BorderThickness = 2;
+            this.pnlHomnay.Controls.Add(this.lblDonHang);
+            this.pnlHomnay.Controls.Add(this.lblDoanhThu);
             this.pnlHomnay.Controls.Add(this.lblSodonhang);
-            this.pnlHomnay.Controls.Add(this.lblSodoanhthu);
-            this.pnlHomnay.Controls.Add(this.lblDonhang);
-            this.pnlHomnay.Controls.Add(this.lblDoanhthu);
+            this.pnlHomnay.Controls.Add(this.lblDoanhthunay);
             this.pnlHomnay.Controls.Add(this.lblHomnay);
             this.pnlHomnay.ForeColor = System.Drawing.SystemColors.ControlText;
             this.pnlHomnay.Location = new System.Drawing.Point(95, 46);
             this.pnlHomnay.Name = "pnlHomnay";
             this.pnlHomnay.Size = new System.Drawing.Size(334, 218);
             this.pnlHomnay.TabIndex = 0;
+            this.pnlHomnay.Click += new System.EventHandler(this.UC_Trangchu_Load);
+            // 
+            // lblDonHang
+            // 
+            this.lblDonHang.AutoSize = true;
+            this.lblDonHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDonHang.Location = new System.Drawing.Point(163, 143);
+            this.lblDonHang.Name = "lblDonHang";
+            this.lblDonHang.Size = new System.Drawing.Size(39, 29);
+            this.lblDonHang.TabIndex = 4;
+            this.lblDonHang.Text = "20";
+            // 
+            // lblDoanhThu
+            // 
+            this.lblDoanhThu.AutoSize = true;
+            this.lblDoanhThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDoanhThu.Location = new System.Drawing.Point(157, 93);
+            this.lblDoanhThu.Name = "lblDoanhThu";
+            this.lblDoanhThu.Size = new System.Drawing.Size(97, 29);
+            this.lblDoanhThu.TabIndex = 3;
+            this.lblDoanhThu.Text = "190.000";
             // 
             // lblSodonhang
             // 
             this.lblSodonhang.AutoSize = true;
             this.lblSodonhang.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSodonhang.Location = new System.Drawing.Point(163, 143);
+            this.lblSodonhang.Location = new System.Drawing.Point(18, 143);
             this.lblSodonhang.Name = "lblSodonhang";
-            this.lblSodonhang.Size = new System.Drawing.Size(39, 29);
-            this.lblSodonhang.TabIndex = 4;
-            this.lblSodonhang.Text = "20";
+            this.lblSodonhang.Size = new System.Drawing.Size(122, 29);
+            this.lblSodonhang.TabIndex = 2;
+            this.lblSodonhang.Text = "Đơn hàng:";
             // 
-            // lblSodoanhthu
+            // lblDoanhthunay
             // 
-            this.lblSodoanhthu.AutoSize = true;
-            this.lblSodoanhthu.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSodoanhthu.Location = new System.Drawing.Point(157, 93);
-            this.lblSodoanhthu.Name = "lblSodoanhthu";
-            this.lblSodoanhthu.Size = new System.Drawing.Size(97, 29);
-            this.lblSodoanhthu.TabIndex = 3;
-            this.lblSodoanhthu.Text = "190.000";
-            // 
-            // lblDonhang
-            // 
-            this.lblDonhang.AutoSize = true;
-            this.lblDonhang.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDonhang.Location = new System.Drawing.Point(18, 143);
-            this.lblDonhang.Name = "lblDonhang";
-            this.lblDonhang.Size = new System.Drawing.Size(122, 29);
-            this.lblDonhang.TabIndex = 2;
-            this.lblDonhang.Text = "Đơn hàng:";
-            // 
-            // lblDoanhthu
-            // 
-            this.lblDoanhthu.AutoSize = true;
-            this.lblDoanhthu.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDoanhthu.Location = new System.Drawing.Point(18, 93);
-            this.lblDoanhthu.Name = "lblDoanhthu";
-            this.lblDoanhthu.Size = new System.Drawing.Size(133, 29);
-            this.lblDoanhthu.TabIndex = 1;
-            this.lblDoanhthu.Text = "Doanh thu :";
+            this.lblDoanhthunay.AutoSize = true;
+            this.lblDoanhthunay.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDoanhthunay.Location = new System.Drawing.Point(18, 93);
+            this.lblDoanhthunay.Name = "lblDoanhthunay";
+            this.lblDoanhthunay.Size = new System.Drawing.Size(133, 29);
+            this.lblDoanhthunay.TabIndex = 1;
+            this.lblDoanhthunay.Text = "Doanh thu :";
             // 
             // lblHomnay
             // 
@@ -215,7 +216,7 @@
             this.lblCanhbao.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCanhbao.Location = new System.Drawing.Point(81, 22);
             this.lblCanhbao.Name = "lblCanhbao";
-            this.lblCanhbao.Size = new System.Drawing.Size(209, 32);
+            this.lblCanhbao.Size = new System.Drawing.Size(222, 32);
             this.lblCanhbao.TabIndex = 0;
             this.lblCanhbao.Text = "⚠️ CẢNH BÁO";
             // 
@@ -226,7 +227,7 @@
             this.pnlHoatdong.BorderRadius = 18;
             this.pnlHoatdong.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.pnlHoatdong.BorderThickness = 2;
-            this.pnlHoatdong.Controls.Add(this.lblSoluongdon);
+            this.pnlHoatdong.Controls.Add(this.lblDonDangXuLy);
             this.pnlHoatdong.Controls.Add(this.lblDonxuli);
             this.pnlHoatdong.Controls.Add(this.lblHoatdong);
             this.pnlHoatdong.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -234,16 +235,17 @@
             this.pnlHoatdong.Name = "pnlHoatdong";
             this.pnlHoatdong.Size = new System.Drawing.Size(334, 218);
             this.pnlHoatdong.TabIndex = 5;
+            this.pnlHoatdong.Click += new System.EventHandler(this.UC_Trangchu_Load);
             // 
-            // lblSoluongdon
+            // lblDonDangXuLy
             // 
-            this.lblSoluongdon.AutoSize = true;
-            this.lblSoluongdon.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSoluongdon.Location = new System.Drawing.Point(201, 109);
-            this.lblSoluongdon.Name = "lblSoluongdon";
-            this.lblSoluongdon.Size = new System.Drawing.Size(26, 29);
-            this.lblSoluongdon.TabIndex = 3;
-            this.lblSoluongdon.Text = "2";
+            this.lblDonDangXuLy.AutoSize = true;
+            this.lblDonDangXuLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDonDangXuLy.Location = new System.Drawing.Point(201, 109);
+            this.lblDonDangXuLy.Name = "lblDonDangXuLy";
+            this.lblDonDangXuLy.Size = new System.Drawing.Size(26, 29);
+            this.lblDonDangXuLy.TabIndex = 3;
+            this.lblDonDangXuLy.Text = "2";
             // 
             // lblDonxuli
             // 
@@ -261,19 +263,19 @@
             this.lblHoatdong.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHoatdong.Location = new System.Drawing.Point(55, 34);
             this.lblHoatdong.Name = "lblHoatdong";
-            this.lblHoatdong.Size = new System.Drawing.Size(233, 32);
+            this.lblHoatdong.Size = new System.Drawing.Size(238, 32);
             this.lblHoatdong.TabIndex = 0;
-            this.lblHoatdong.Text = "⚡ HOẠT ĐỘNG";
+            this.lblHoatdong.Text = "⚡HOẠT ĐỘNG";
             // 
-            // chrXuhuongban
+            // chartXuHuong
             // 
             chartArea1.Name = "ChartArea1";
-            this.chrXuhuongban.ChartAreas.Add(chartArea1);
+            this.chartXuHuong.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
-            this.chrXuhuongban.Legends.Add(legend1);
-            this.chrXuhuongban.Location = new System.Drawing.Point(75, 359);
-            this.chrXuhuongban.Name = "chrXuhuongban";
-            this.chrXuhuongban.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
+            this.chartXuHuong.Legends.Add(legend1);
+            this.chartXuHuong.Location = new System.Drawing.Point(75, 359);
+            this.chartXuHuong.Name = "chartXuHuong";
+            this.chartXuHuong.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
             series1.BorderColor = System.Drawing.Color.Black;
             series1.BorderWidth = 3;
             series1.ChartArea = "ChartArea1";
@@ -287,16 +289,16 @@
             series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
             series1.Name = "Series1";
             series1.ShadowColor = System.Drawing.Color.White;
-            this.chrXuhuongban.Series.Add(series1);
-            this.chrXuhuongban.Size = new System.Drawing.Size(558, 490);
-            this.chrXuhuongban.TabIndex = 6;
-            this.chrXuhuongban.Text = "XU HƯỚNG BÁN HÀNG TUẦN NÀY";
+            this.chartXuHuong.Series.Add(series1);
+            this.chartXuHuong.Size = new System.Drawing.Size(558, 490);
+            this.chartXuHuong.TabIndex = 6;
+            this.chartXuHuong.Text = "XU HƯỚNG BÁN HÀNG TUẦN NÀY";
             title1.BackColor = System.Drawing.Color.White;
             title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             title1.Name = "Title1";
             title1.Text = "XU HƯỚNG BÁN HÀNG TUẦN NÀY";
-            this.chrXuhuongban.Titles.Add(title1);
-            this.chrXuhuongban.Click += new System.EventHandler(this.chart1_Click);
+            this.chartXuHuong.Titles.Add(title1);
+            this.chartXuHuong.Click += new System.EventHandler(this.UC_Trangchu_Load);
             // 
             // pnlMauhoa
             // 
@@ -346,6 +348,19 @@
             this.lblLanghoa.TabIndex = 1;
             this.lblLanghoa.Text = "LÃNG HOA HỒNG KHAI TRƯƠNG";
             // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.BackgroundImage")));
+            this.guna2PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(264, 156);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox3.TabIndex = 0;
+            this.guna2PictureBox3.TabStop = false;
+            // 
             // pnlHoa3
             // 
             this.pnlHoa3.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
@@ -378,6 +393,19 @@
             this.lblSophia.Size = new System.Drawing.Size(194, 22);
             this.lblSophia.TabIndex = 1;
             this.lblSophia.Text = "HOA CHÙM SOPHIA";
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.BackgroundImage")));
+            this.guna2PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(264, 156);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox2.TabIndex = 0;
+            this.guna2PictureBox2.TabStop = false;
             // 
             // pnlHoa2
             // 
@@ -412,6 +440,19 @@
             this.lblTenbohoa.TabIndex = 1;
             this.lblTenbohoa.Text = "BÓ HOA HƯỚNG DƯƠNG";
             // 
+            // ptbHoahuongduong
+            // 
+            this.ptbHoahuongduong.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ptbHoahuongduong.BackgroundImage")));
+            this.ptbHoahuongduong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ptbHoahuongduong.Image = ((System.Drawing.Image)(resources.GetObject("ptbHoahuongduong.Image")));
+            this.ptbHoahuongduong.ImageRotate = 0F;
+            this.ptbHoahuongduong.Location = new System.Drawing.Point(0, 0);
+            this.ptbHoahuongduong.Name = "ptbHoahuongduong";
+            this.ptbHoahuongduong.Size = new System.Drawing.Size(264, 156);
+            this.ptbHoahuongduong.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbHoahuongduong.TabIndex = 0;
+            this.ptbHoahuongduong.TabStop = false;
+            // 
             // pnlHoa1
             // 
             this.pnlHoa1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
@@ -445,56 +486,6 @@
             this.lblTengiohoa.TabIndex = 1;
             this.lblTengiohoa.Text = "GIỎ HOA SINH NHẬT";
             // 
-            // lblMauhoaban
-            // 
-            this.lblMauhoaban.AutoSize = true;
-            this.lblMauhoaban.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMauhoaban.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblMauhoaban.Location = new System.Drawing.Point(85, 27);
-            this.lblMauhoaban.Name = "lblMauhoaban";
-            this.lblMauhoaban.Size = new System.Drawing.Size(398, 32);
-            this.lblMauhoaban.TabIndex = 0;
-            this.lblMauhoaban.Text = "MẪU HOA BÁN CHẠY NHẤT";
-            // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.BackgroundImage")));
-            this.guna2PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(0, 0);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(264, 156);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox3.TabIndex = 0;
-            this.guna2PictureBox3.TabStop = false;
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.BackgroundImage")));
-            this.guna2PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(264, 156);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox2.TabIndex = 0;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // ptbHoahuongduong
-            // 
-            this.ptbHoahuongduong.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ptbHoahuongduong.BackgroundImage")));
-            this.ptbHoahuongduong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ptbHoahuongduong.Image = ((System.Drawing.Image)(resources.GetObject("ptbHoahuongduong.Image")));
-            this.ptbHoahuongduong.ImageRotate = 0F;
-            this.ptbHoahuongduong.Location = new System.Drawing.Point(0, 0);
-            this.ptbHoahuongduong.Name = "ptbHoahuongduong";
-            this.ptbHoahuongduong.Size = new System.Drawing.Size(264, 156);
-            this.ptbHoahuongduong.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbHoahuongduong.TabIndex = 0;
-            this.ptbHoahuongduong.TabStop = false;
-            // 
             // ptbGiohoa
             // 
             this.ptbGiohoa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ptbGiohoa.BackgroundImage")));
@@ -508,12 +499,23 @@
             this.ptbGiohoa.TabIndex = 0;
             this.ptbGiohoa.TabStop = false;
             // 
+            // lblMauhoaban
+            // 
+            this.lblMauhoaban.AutoSize = true;
+            this.lblMauhoaban.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMauhoaban.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblMauhoaban.Location = new System.Drawing.Point(85, 27);
+            this.lblMauhoaban.Name = "lblMauhoaban";
+            this.lblMauhoaban.Size = new System.Drawing.Size(424, 32);
+            this.lblMauhoaban.TabIndex = 0;
+            this.lblMauhoaban.Text = "MẪU HOA BÁN CHẠY NHẤT";
+            // 
             // UC_Trangchu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnlMauhoa);
-            this.Controls.Add(this.chrXuhuongban);
+            this.Controls.Add(this.chartXuHuong);
             this.Controls.Add(this.pnlHoatdong);
             this.Controls.Add(this.pnlCanhbao);
             this.Controls.Add(this.pnlHomnay);
@@ -526,20 +528,20 @@
             this.pnlCanhbao.PerformLayout();
             this.pnlHoatdong.ResumeLayout(false);
             this.pnlHoatdong.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chrXuhuongban)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartXuHuong)).EndInit();
             this.pnlMauhoa.ResumeLayout(false);
             this.pnlMauhoa.PerformLayout();
             this.pnlHoa4.ResumeLayout(false);
             this.pnlHoa4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.pnlHoa3.ResumeLayout(false);
             this.pnlHoa3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.pnlHoa2.ResumeLayout(false);
             this.pnlHoa2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbHoahuongduong)).EndInit();
             this.pnlHoa1.ResumeLayout(false);
             this.pnlHoa1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbHoahuongduong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbGiohoa)).EndInit();
             this.ResumeLayout(false);
 
@@ -549,10 +551,10 @@
 
         private Guna.UI2.WinForms.Guna2Panel pnlHomnay;
         private System.Windows.Forms.Label lblHomnay;
+        private System.Windows.Forms.Label lblDonHang;
+        private System.Windows.Forms.Label lblDoanhThu;
         private System.Windows.Forms.Label lblSodonhang;
-        private System.Windows.Forms.Label lblSodoanhthu;
-        private System.Windows.Forms.Label lblDonhang;
-        private System.Windows.Forms.Label lblDoanhthu;
+        private System.Windows.Forms.Label lblDoanhthunay;
         private Guna.UI2.WinForms.Guna2Panel pnlCanhbao;
         private System.Windows.Forms.Label lblSoluonghet;
         private System.Windows.Forms.Label lblSoluongsaphet;
@@ -560,10 +562,10 @@
         private System.Windows.Forms.Label lblSaphet;
         private System.Windows.Forms.Label lblCanhbao;
         private Guna.UI2.WinForms.Guna2Panel pnlHoatdong;
-        private System.Windows.Forms.Label lblSoluongdon;
+        private System.Windows.Forms.Label lblDonDangXuLy;
         private System.Windows.Forms.Label lblDonxuli;
         private System.Windows.Forms.Label lblHoatdong;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chrXuhuongban;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartXuHuong;
         private Guna.UI2.WinForms.Guna2Panel pnlMauhoa;
         private Guna.UI2.WinForms.Guna2Panel pnlHoa1;
         private Guna.UI2.WinForms.Guna2PictureBox ptbGiohoa;

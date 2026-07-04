@@ -1,45 +1,23 @@
-﻿namespace QLCUAHANGHOATUOI.All_User_control
+﻿using System.Windows.Forms;
+
+private void InitializeComponent()
 {
-    partial class UC_ThanhtoanNV
-    {
-        /// <summary> 
-        /// Required designer variable.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
+    // Tìm kiếm
+    this.txtSearch = new TextBox { Location = new System.Drawing.Point(20, 20), Width = 250 };
+    this.txtSearch.TextChanged += txtSearch_TextChanged;
 
-        /// <summary> 
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+    // Danh sách sản phẩm
+    this.flowLayoutPanelProducts = new FlowLayoutPanel { Location = new System.Drawing.Point(20, 60), Size = new System.Drawing.Size(300, 400) };
 
-        #region Component Designer generated code
+    // Bảng giỏ hàng
+    this.dataGridViewCart = new DataGridView { Location = new System.Drawing.Point(350, 20), Size = new System.Drawing.Size(400, 350) };
 
-        /// <summary> 
-        /// Required method for Designer support - do not modify 
-        /// the contents of this method with the code editor.
-        /// </summary>
-        private void InitializeComponent()
-        {
-            this.SuspendLayout();
-            // 
-            // UC_ThanhtoanNV
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "UC_ThanhtoanNV";
-            this.Size = new System.Drawing.Size(1621, 886);
-            this.ResumeLayout(false);
+    // Nhãn tổng tiền
+    this.lblTotal = new Label { Location = new System.Drawing.Point(350, 380), Text = "Tổng tiền: 0 VNĐ", Font = new System.Drawing.Font("Arial", 12, System.Drawing.FontStyle.Bold) };
 
-        }
+    // Nút thanh toán
+    this.btnThanhToan = new Button { Location = new System.Drawing.Point(600, 380), Text = "Thanh Toán & In", Size = new System.Drawing.Size(150, 40), BackColor = System.Drawing.Color.LightGreen };
+    this.btnThanhToan.Click += btnThanhToan_Click;
 
-        #endregion
-    }
+    this.Controls.AddRange(new Control[] { txtSearch, flowLayoutPanelProducts, dataGridViewCart, lblTotal, btnThanhToan });
 }

@@ -34,32 +34,33 @@
             this.btnKhachhang = new Guna.UI2.WinForms.Guna2Button();
             this.btnDangxuat = new Guna.UI2.WinForms.Guna2Button();
             this.btnTaikhoan = new Guna.UI2.WinForms.Guna2Button();
-            this.btnThongke = new Guna.UI2.WinForms.Guna2Button();
             this.btnHoadon = new Guna.UI2.WinForms.Guna2Button();
             this.btnSanpham = new Guna.UI2.WinForms.Guna2Button();
             this.btnNhanvien = new Guna.UI2.WinForms.Guna2Button();
             this.btnTrangchu = new Guna.UI2.WinForms.Guna2Button();
-            this.pnlLogo = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.ptbLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblCuahang = new System.Windows.Forms.Label();
             this.lblTieude = new System.Windows.Forms.Label();
             this.pnlTrangchu = new Guna.UI2.WinForms.Guna2Panel();
-            this.uC_Khachhang1 = new QLCUAHANGHOATUOI.All_User_control.UC_Khachhang();
-            this.uC_Hoadon1 = new QLCUAHANGHOATUOI.All_User_control.UC_Hoadon();
-            this.uC_Sanpham1 = new QLCUAHANGHOATUOI.All_User_control.UC_Sanpham();
-            this.uC_Nhanvien11 = new QLCUAHANGHOATUOI.All_User_control.UC_Nhanvien1();
-            this.uC_Trangchu1 = new QLCUAHANGHOATUOI.All_User_control.UC_Trangchu();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse6 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.ptbLogo = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pnlLogo = new Guna.UI2.WinForms.Guna2Panel();
+            this.uC_Khachhang1 = new QLCUAHANGHOATUOI.All_User_control.UC_Khachhang();
+            this.uC_Hoadon1 = new QLCUAHANGHOATUOI.All_User_control.UC_Hoadon();
+            this.uC_Sanpham1 = new QLCUAHANGHOATUOI.All_User_control.UC_Sanpham();
+            this.uC_Nhanvien11 = new QLCUAHANGHOATUOI.All_User_control.UC_Nhanvien1();
+            this.uC_Trangchu1 = new QLCUAHANGHOATUOI.All_User_control.UC_Trangchu();
+            this.guna2Elipse7 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.uC_Taikhoan1 = new QLCUAHANGHOATUOI.GUI.UC_Taikhoan();
             this.pnlMenu.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
             this.pnlTrangchu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -71,7 +72,6 @@
             this.pnlMenu.Controls.Add(this.btnKhachhang);
             this.pnlMenu.Controls.Add(this.btnDangxuat);
             this.pnlMenu.Controls.Add(this.btnTaikhoan);
-            this.pnlMenu.Controls.Add(this.btnThongke);
             this.pnlMenu.Controls.Add(this.btnHoadon);
             this.pnlMenu.Controls.Add(this.btnSanpham);
             this.pnlMenu.Controls.Add(this.btnNhanvien);
@@ -98,7 +98,7 @@
             this.btnKhachhang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnKhachhang.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKhachhang.ForeColor = System.Drawing.Color.Black;
-            this.btnKhachhang.Location = new System.Drawing.Point(50, 625);
+            this.btnKhachhang.Location = new System.Drawing.Point(50, 637);
             this.btnKhachhang.Name = "btnKhachhang";
             this.btnKhachhang.Size = new System.Drawing.Size(215, 53);
             this.btnKhachhang.TabIndex = 8;
@@ -118,7 +118,7 @@
             this.btnDangxuat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnDangxuat.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangxuat.ForeColor = System.Drawing.Color.Black;
-            this.btnDangxuat.Location = new System.Drawing.Point(50, 881);
+            this.btnDangxuat.Location = new System.Drawing.Point(50, 822);
             this.btnDangxuat.Name = "btnDangxuat";
             this.btnDangxuat.Size = new System.Drawing.Size(215, 53);
             this.btnDangxuat.TabIndex = 7;
@@ -138,32 +138,12 @@
             this.btnTaikhoan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnTaikhoan.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTaikhoan.ForeColor = System.Drawing.Color.Black;
-            this.btnTaikhoan.Location = new System.Drawing.Point(50, 795);
+            this.btnTaikhoan.Location = new System.Drawing.Point(50, 727);
             this.btnTaikhoan.Name = "btnTaikhoan";
             this.btnTaikhoan.Size = new System.Drawing.Size(215, 53);
             this.btnTaikhoan.TabIndex = 6;
             this.btnTaikhoan.Text = "👤 Tài khoản";
             this.btnTaikhoan.Click += new System.EventHandler(this.btnTaikhoan_Click);
-            // 
-            // btnThongke
-            // 
-            this.btnThongke.BorderRadius = 5;
-            this.btnThongke.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.btnThongke.BorderThickness = 2;
-            this.btnThongke.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnThongke.CustomBorderColor = System.Drawing.Color.Black;
-            this.btnThongke.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnThongke.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnThongke.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnThongke.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnThongke.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongke.ForeColor = System.Drawing.Color.Black;
-            this.btnThongke.Location = new System.Drawing.Point(50, 710);
-            this.btnThongke.Name = "btnThongke";
-            this.btnThongke.Size = new System.Drawing.Size(215, 53);
-            this.btnThongke.TabIndex = 5;
-            this.btnThongke.Text = "📈 Thống kê";
-            this.btnThongke.Click += new System.EventHandler(this.btnThongke_Click);
             // 
             // btnHoadon
             // 
@@ -178,7 +158,7 @@
             this.btnHoadon.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnHoadon.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHoadon.ForeColor = System.Drawing.Color.Black;
-            this.btnHoadon.Location = new System.Drawing.Point(50, 542);
+            this.btnHoadon.Location = new System.Drawing.Point(50, 550);
             this.btnHoadon.Name = "btnHoadon";
             this.btnHoadon.Size = new System.Drawing.Size(215, 53);
             this.btnHoadon.TabIndex = 4;
@@ -245,16 +225,6 @@
             this.btnTrangchu.Text = "🏠 Trang Chủ";
             this.btnTrangchu.Click += new System.EventHandler(this.btnTrangchu_Click);
             // 
-            // pnlLogo
-            // 
-            this.pnlLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlLogo.BackgroundImage")));
-            this.pnlLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlLogo.Location = new System.Drawing.Point(4, 0);
-            this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(312, 217);
-            this.pnlLogo.TabIndex = 0;
-            this.pnlLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint_1);
-            // 
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -266,17 +236,6 @@
             this.guna2Panel1.Size = new System.Drawing.Size(1673, 143);
             this.guna2Panel1.TabIndex = 2;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
-            // 
-            // ptbLogo
-            // 
-            this.ptbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ptbLogo.Image = ((System.Drawing.Image)(resources.GetObject("ptbLogo.Image")));
-            this.ptbLogo.ImageRotate = 0F;
-            this.ptbLogo.Location = new System.Drawing.Point(1394, 36);
-            this.ptbLogo.Name = "ptbLogo";
-            this.ptbLogo.Size = new System.Drawing.Size(225, 74);
-            this.ptbLogo.TabIndex = 2;
-            this.ptbLogo.TabStop = false;
             // 
             // lblCuahang
             // 
@@ -301,6 +260,7 @@
             // 
             // pnlTrangchu
             // 
+            this.pnlTrangchu.Controls.Add(this.uC_Taikhoan1);
             this.pnlTrangchu.Controls.Add(this.uC_Khachhang1);
             this.pnlTrangchu.Controls.Add(this.uC_Hoadon1);
             this.pnlTrangchu.Controls.Add(this.uC_Sanpham1);
@@ -310,6 +270,51 @@
             this.pnlTrangchu.Name = "pnlTrangchu";
             this.pnlTrangchu.Size = new System.Drawing.Size(1592, 886);
             this.pnlTrangchu.TabIndex = 1;
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.TargetControl = this;
+            // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.TargetControl = this;
+            // 
+            // guna2Elipse3
+            // 
+            this.guna2Elipse3.TargetControl = this;
+            // 
+            // guna2Elipse4
+            // 
+            this.guna2Elipse4.TargetControl = this;
+            // 
+            // guna2Elipse5
+            // 
+            this.guna2Elipse5.TargetControl = this;
+            // 
+            // guna2Elipse6
+            // 
+            this.guna2Elipse6.TargetControl = this;
+            // 
+            // ptbLogo
+            // 
+            this.ptbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ptbLogo.Image = ((System.Drawing.Image)(resources.GetObject("ptbLogo.Image")));
+            this.ptbLogo.ImageRotate = 0F;
+            this.ptbLogo.Location = new System.Drawing.Point(1394, 36);
+            this.ptbLogo.Name = "ptbLogo";
+            this.ptbLogo.Size = new System.Drawing.Size(225, 74);
+            this.ptbLogo.TabIndex = 2;
+            this.ptbLogo.TabStop = false;
+            // 
+            // pnlLogo
+            // 
+            this.pnlLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlLogo.BackgroundImage")));
+            this.pnlLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlLogo.Location = new System.Drawing.Point(4, 0);
+            this.pnlLogo.Name = "pnlLogo";
+            this.pnlLogo.Size = new System.Drawing.Size(312, 217);
+            this.pnlLogo.TabIndex = 0;
+            this.pnlLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint_1);
             // 
             // uC_Khachhang1
             // 
@@ -352,29 +357,17 @@
             this.uC_Trangchu1.Size = new System.Drawing.Size(1621, 886);
             this.uC_Trangchu1.TabIndex = 0;
             // 
-            // guna2Elipse1
+            // guna2Elipse7
             // 
-            this.guna2Elipse1.TargetControl = this;
+            this.guna2Elipse7.TargetControl = this;
             // 
-            // guna2Elipse2
+            // uC_Taikhoan1
             // 
-            this.guna2Elipse2.TargetControl = this;
-            // 
-            // guna2Elipse3
-            // 
-            this.guna2Elipse3.TargetControl = this;
-            // 
-            // guna2Elipse4
-            // 
-            this.guna2Elipse4.TargetControl = this;
-            // 
-            // guna2Elipse5
-            // 
-            this.guna2Elipse5.TargetControl = this;
-            // 
-            // guna2Elipse6
-            // 
-            this.guna2Elipse6.TargetControl = this;
+            this.uC_Taikhoan1.BackColor = System.Drawing.SystemColors.Info;
+            this.uC_Taikhoan1.Location = new System.Drawing.Point(-2, 3);
+            this.uC_Taikhoan1.Name = "uC_Taikhoan1";
+            this.uC_Taikhoan1.Size = new System.Drawing.Size(1621, 909);
+            this.uC_Taikhoan1.TabIndex = 0;
             // 
             // frmManchinh
             // 
@@ -397,8 +390,8 @@
             this.pnlMenu.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
             this.pnlTrangchu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -413,7 +406,6 @@
         private Guna.UI2.WinForms.Guna2Button btnNhanvien;
         private Guna.UI2.WinForms.Guna2Button btnDangxuat;
         private Guna.UI2.WinForms.Guna2Button btnTaikhoan;
-        private Guna.UI2.WinForms.Guna2Button btnThongke;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label lblCuahang;
         private System.Windows.Forms.Label lblTieude;
@@ -431,5 +423,7 @@
         private All_User_control.UC_Hoadon uC_Hoadon1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse6;
         private All_User_control.UC_Khachhang uC_Khachhang1;
+        private UC_Taikhoan uC_Taikhoan1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse7;
     }
 }

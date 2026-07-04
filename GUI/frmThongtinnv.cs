@@ -1,84 +1,96 @@
-﻿
-using System;
-using System.Data.SqlClient;
+﻿using System;
 using System.Windows.Forms;
+using QLCUAHANGHOATUOI.Database;
+using QLCUAHANGHOATUOI.Entity;
 
 namespace QLCUAHANGHOATUOI.GUI
 {
     public partial class frmThongtinnv : Form
     {
-        private bool isAddMode; 
-        private string strCon = @"Data Source=.\SQLEXPRESS;Initial Catalog=QL_CuaHangHoaTuoi;Integrated Security=True";
+        private readonly bool isAddMode;
+        private readonly NhanVienDB nhanVienDB = new NhanVienDB();
 
+        
         public frmThongtinnv()
         {
             InitializeComponent();
             isAddMode = true;
             lblTieuDe.Text = "THÊM MỚI NHÂN VIÊN";
             txtMaNV.Enabled = true;
+
+            
+            dateTimePicker1.Value = DateTime.Now;
+            if (guna2ComboBox1.Items.Count > 0) guna2ComboBox1.SelectedIndex = 0;
         }
 
-        public frmThongtinnv(string ma, string ten, string chucVu, string sdt)
+        
+        public frmThongtinnv(string ma, string ten, string chucVu, string sdt, string gioiTinh, DateTime ngaySinh)
         {
             InitializeComponent();
             isAddMode = false;
             lblTieuDe.Text = "CHỈNH SỬA THÔNG TIN";
+
             txtMaNV.Text = ma;
-            txtMaNV.Enabled = false; 
+            txtMaNV.Enabled = false;
             txtTenNV.Text = ten;
             cboChucVu.Text = chucVu;
             txtSDT.Text = sdt;
+            guna2ComboBox1.Text = gioiTinh;
+            dateTimePicker1.Value = ngaySinh;
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-
+            
             if (string.IsNullOrWhiteSpace(txtMaNV.Text) || string.IsNullOrWhiteSpace(txtTenNV.Text))
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ Mã và Tên nhân viên!");
+                MessageBox.Show("Vui lòng nhập đầy đủ Mã và Tên nhân viên!", "Thông báo");
                 return;
             }
 
-            string query = "";
+            
+            NhanVien nv = new NhanVien
+            {
+                MaNhanVien = txtMaNV.Text.Trim(),
+                TenNV = txtTenNV.Text.Trim(),
+                ChucVu = cboChucVu.Text,
+                Sdt = txtSDT.Text.Trim(),
+                GioiTinh = guna2ComboBox1.Text,
+                NgaySinh = dateTimePicker1.Value,
+                TrangThai = "Đang làm việc"
+            };
+
+            bool ketQua;
             if (isAddMode)
             {
-                query = "INSERT INTO NHANVIEN (MaNV, TenNV, ChucVu, SDT) VALUES (@Ma, @Ten, @ChucVu, @SDT)";
+                ketQua = nhanVienDB.Them(nv);
             }
             else
             {
-
-                query = "UPDATE NHANVIEN SET TenNV = @Ten, ChucVu = @ChucVu, SDT = @SDT WHERE MaNV = @Ma";
+                ketQua = nhanVienDB.Sua(nv);
             }
 
-            using (SqlConnection con = new SqlConnection(strCon))
+         
+            if (ketQua)
             {
-                using (SqlCommand cmd = new SqlCommand(query, con))
-                {
-                    cmd.Parameters.AddWithValue("@Ma", txtMaNV.Text.Trim());
-                    cmd.Parameters.AddWithValue("@Ten", txtTenNV.Text.Trim());
-                    cmd.Parameters.AddWithValue("@ChucVu", cboChucVu.Text);
-                    cmd.Parameters.AddWithValue("@SDT", txtSDT.Text.Trim());
-
-                    try
-                    {
-                        con.Open();
-                        cmd.ExecuteNonQuery();
-                        con.Close();
-
-                        MessageBox.Show(isAddMode ? "Thêm nhân viên thành công!" : "Cập nhật thông tin thành công!", "Thông báo");
-                        this.DialogResult = DialogResult.OK; 
-                        this.Close();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Lỗi thực thi SQL: " + ex.Message, "Lỗi");
-                    }
-                }
+                MessageBox.Show(isAddMode ? "Thêm nhân viên thành công!" : "Cập nhật thông tin thành công!", "Thông báo");
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Thao tác thất bại! Vui lòng kiểm tra lại dữ liệu hoặc mã nhân viên bị trùng.", "Lỗi");
             }
         }
+
         private void btnHuy_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void lblChucVu_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -39,7 +39,6 @@ namespace QLCUAHANGHOATUOI.GUI
                 login.Show();
             }
         }
-
         private void btnSanpham_Click_1(object sender, EventArgs e)
         {
 
@@ -54,6 +53,11 @@ namespace QLCUAHANGHOATUOI.GUI
         {
             uC_TongquanNV1.Visible = true;
             uC_TongquanNV1.BringToFront();
+        }
+
+        private void btnDangxuat_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -82,6 +82,12 @@
     <Compile Include="All User control\UC_Sanpham.Designer.cs">
       <DependentUpon>UC_Sanpham.cs</DependentUpon>
     </Compile>
+    <Compile Include="All User control\UC_Taikhoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="All User control\UC_Taikhoan.Designer.cs">
+      <DependentUpon>UC_Taikhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="All User control\UC_ThanhtoanNV.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -106,6 +112,14 @@
     <Compile Include="All User control\UC_Trangchu.Designer.cs">
       <DependentUpon>UC_Trangchu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Database\DBconnect.cs" />
+    <Compile Include="Database\KhachHangDB.cs" />
+    <Compile Include="Database\NhanVienDB.cs" />
+    <Compile Include="Database\SanPhamDB.cs" />
+    <Compile Include="Database\TaiKhoanDB.cs" />
+    <Compile Include="Database\TrangChuDB.cs" />
+    <Compile Include="Entity\Nhanvien.cs" />
+    <Compile Include="Entity\Taikhoan.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +197,9 @@
     <EmbeddedResource Include="All User control\UC_Sanpham.resx">
       <DependentUpon>UC_Sanpham.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="All User control\UC_Taikhoan.resx">
+      <DependentUpon>UC_Taikhoan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="All User control\UC_ThanhtoanNV.resx">
       <DependentUpon>UC_ThanhtoanNV.cs</DependentUpon>
     </EmbeddedResource>
@@ -247,11 +264,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DAL\" />
-    <Folder Include="Database\" />
-    <Folder Include="DTO\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\login.jpg" />
   </ItemGroup>

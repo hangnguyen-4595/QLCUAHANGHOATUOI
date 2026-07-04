@@ -34,18 +34,18 @@
             this.btnDangxuat = new Guna.UI2.WinForms.Guna2Button();
             this.btnThanhtoan = new Guna.UI2.WinForms.Guna2Button();
             this.btnTrangchu = new Guna.UI2.WinForms.Guna2Button();
-            this.pnlLogo = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.ptbLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblCuahang = new System.Windows.Forms.Label();
             this.lblTieude = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.ptbLogo = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pnlLogo = new Guna.UI2.WinForms.Guna2Panel();
             this.uC_TongquanNV1 = new QLCUAHANGHOATUOI.All_User_control.UC_TongquanNV();
             this.pnlMenu.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -83,6 +83,7 @@
             this.btnDangxuat.Size = new System.Drawing.Size(215, 53);
             this.btnDangxuat.TabIndex = 7;
             this.btnDangxuat.Text = "➡️ Đăng xuất";
+            this.btnDangxuat.Click += new System.EventHandler(this.btnDangxuat_Click_1);
             // 
             // btnThanhtoan
             // 
@@ -123,15 +124,6 @@
             this.btnTrangchu.Text = "🏠 Trang Chủ";
             this.btnTrangchu.Click += new System.EventHandler(this.btnTrangchu_Click);
             // 
-            // pnlLogo
-            // 
-            this.pnlLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlLogo.BackgroundImage")));
-            this.pnlLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlLogo.Location = new System.Drawing.Point(4, 0);
-            this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(312, 217);
-            this.pnlLogo.TabIndex = 0;
-            // 
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -142,17 +134,6 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1673, 143);
             this.guna2Panel1.TabIndex = 3;
-            // 
-            // ptbLogo
-            // 
-            this.ptbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ptbLogo.Image = ((System.Drawing.Image)(resources.GetObject("ptbLogo.Image")));
-            this.ptbLogo.ImageRotate = 0F;
-            this.ptbLogo.Location = new System.Drawing.Point(1394, 36);
-            this.ptbLogo.Name = "ptbLogo";
-            this.ptbLogo.Size = new System.Drawing.Size(225, 74);
-            this.ptbLogo.TabIndex = 2;
-            this.ptbLogo.TabStop = false;
             // 
             // lblCuahang
             // 
@@ -187,6 +168,26 @@
             // 
             this.guna2Elipse1.TargetControl = this;
             // 
+            // ptbLogo
+            // 
+            this.ptbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ptbLogo.Image = ((System.Drawing.Image)(resources.GetObject("ptbLogo.Image")));
+            this.ptbLogo.ImageRotate = 0F;
+            this.ptbLogo.Location = new System.Drawing.Point(1394, 36);
+            this.ptbLogo.Name = "ptbLogo";
+            this.ptbLogo.Size = new System.Drawing.Size(225, 74);
+            this.ptbLogo.TabIndex = 2;
+            this.ptbLogo.TabStop = false;
+            // 
+            // pnlLogo
+            // 
+            this.pnlLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlLogo.BackgroundImage")));
+            this.pnlLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlLogo.Location = new System.Drawing.Point(4, 0);
+            this.pnlLogo.Name = "pnlLogo";
+            this.pnlLogo.Size = new System.Drawing.Size(312, 217);
+            this.pnlLogo.TabIndex = 0;
+            // 
             // uC_TongquanNV1
             // 
             this.uC_TongquanNV1.BackColor = System.Drawing.SystemColors.Info;
@@ -214,8 +215,8 @@
             this.pnlMenu.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
             this.ResumeLayout(false);
 
         }

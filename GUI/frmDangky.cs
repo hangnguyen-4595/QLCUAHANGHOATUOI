@@ -1,54 +1,33 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+using QLCUAHANGHOATUOI.Database;
+using QLCUAHANGHOATUOI.Entity; 
+
 namespace QLCUAHANGHOATUOI.GUI
 {
     public partial class frmDangky : Form
     {
+        
+        private readonly TaiKhoanDB taiKhoanDB = new TaiKhoanDB();
+
         public frmDangky()
         {
             InitializeComponent();
-            
         }
-        private void lblTendangnhap_Click(object sender, EventArgs e)
-        {
-        }
-        private void lblNhaplaimk_Click(object sender, EventArgs e)
-        {
-        }
-        private void lblHoten_Click(object sender, EventArgs e)
-        {
-        }
-        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
-        {
-        }
-        private void guna2TextBox2_TextChanged(object sender, EventArgs e)
-        {
-        }
-        private void txtVaitro_SelectedIndexChanged(object sender, EventArgs e)
-        {       
-        }
-        private void cboGioitinh_SelectedIndexChanged(object sender, EventArgs e)
-        {         
-        }
+
         private void frmDangky_Load(object sender, EventArgs e)
         {
-           
+         
+            cboGioitinh.Items.Clear();
             cboGioitinh.Items.Add("Nam");
             cboGioitinh.Items.Add("Nữ");
-            
-            cboVaitro.Items.Add("Nhân viên bán hàng");
-            cboVaitro.Items.Add("Nhân viên chăm sóc hoa");
-
             cboGioitinh.SelectedIndex = 0;
-            cboVaitro.SelectedIndex = 0;
+
+           
+            cboVaitro.Items.Clear();
+            cboVaitro.Items.Add("Quản lý");
+            cboVaitro.Items.Add("Nhân viên");
+            cboVaitro.SelectedIndex = 1; 
         }
 
         private void btnDangki_Click(object sender, EventArgs e)
@@ -57,78 +36,66 @@ namespace QLCUAHANGHOATUOI.GUI
             string mk = txtMatkhau.Text.Trim();
             string nhapLai = txtNhaplaimk.Text.Trim();
             string hoTen = txtHoten.Text.Trim();
-            string sdt = guna2TextBox1.Text.Trim();  // ô Số ĐT
+            string sdt = guna2TextBox1.Text.Trim();
             string email = txtEmail.Text.Trim();
             string gt = cboGioitinh.SelectedItem?.ToString();
             string vaiTro = cboVaitro.SelectedItem?.ToString();
-            string ngaySinh = dtpNgaysinh.Value.ToString("dd/MM/yyyy");
-            // Validate
+
+
+            if (string.IsNullOrEmpty(hoTen))
+            {
+                MessageBox.Show("Vui lòng nhập họ tên!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtHoten.Focus(); return;
+            }
             if (string.IsNullOrEmpty(tenDN))
             {
-                MessageBox.Show("Vui lòng nhập tên đăng nhập!", "Thông báo",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng nhập tên đăng nhập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtTendangnhap.Focus(); return;
             }
             if (string.IsNullOrEmpty(mk))
             {
-                MessageBox.Show("Vui lòng nhập mật khẩu!", "Thông báo",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng nhập mật khẩu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtMatkhau.Focus(); return;
             }
             if (mk != nhapLai)
             {
-                MessageBox.Show("Mật khẩu nhập lại không khớp!", "Thông báo",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Mật khẩu nhập lại không khớp!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtNhaplaimk.Clear(); txtNhaplaimk.Focus(); return;
             }
-            if (string.IsNullOrEmpty(hoTen))
+
+         
+            if (taiKhoanDB.KiemTraTrungTenDN(tenDN))
             {
-                MessageBox.Show("Vui lòng nhập họ tên!", "Thông báo",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtHoten.Focus(); return;
-            }
-            // Kiểm tra trùng tên đăng nhập
-            bool trung = TaiKhoanManager.DanhSach
-                .Any(tk => tk.TenDangNhap.Equals(tenDN, StringComparison.OrdinalIgnoreCase));
-            if (trung)
-            {
-                MessageBox.Show("Tên đăng nhập đã tồn tại!", "Thông báo",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Tên đăng nhập này đã tồn tại trên hệ thống!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtTendangnhap.Focus(); return;
             }
-            // Thêm tài khoản mới
-            TaiKhoanManager.DanhSach.Add(new TaiKhoan
+
+            
+            string maNV = "NV_" + tenDN; 
+
+           
+            QLCUAHANGHOATUOI.Entity.TaiKhoan taiKhoanMoi = new QLCUAHANGHOATUOI.Entity.TaiKhoan(tenDN, mk, vaiTro, maNV);
+
+            
+            if (taiKhoanDB.Them(taiKhoanMoi))
             {
-                TenDangNhap = tenDN,
-                MatKhau = mk,
-                HoTen = hoTen,
-                GioiTinh = gt,
-                NgaySinh = ngaySinh,
-                SoDT = sdt,
-                Email = email,
-                VaiTro = vaiTro
-            });
-            MessageBox.Show($"Đăng ký thành công!\nTài khoản: {tenDN}", "Thành công",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Close();
-        }
-        
-
-        private void lblDangky_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void frmLoadDangky(object sender, EventArgs e)
-        {
-            cboGioitinh.Items.Add("Nữ");
-            cboGioitinh.Items.Add("Nam");
-            cboVaitro.Items.Add("Nhân viên giao hàng");
-            cboVaitro.Items.Add("Nhân viên bán hàng");
-            cboVaitro.Items.Add("Nhân viên chăm sóc hoa");
-
-            cboGioitinh.SelectedIndex = 0;
-            cboVaitro.SelectedIndex = 0;
+                MessageBox.Show($"Đăng ký thành công tài khoản: {tenDN} với quyền {vaiTro}!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Đăng ký thất bại! Vui lòng kiểm tra lại kết nối Database hoặc xem mã nhân viên có bị trùng không.", "Lỗi hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
+       
+        private void lblTendangnhap_Click(object sender, EventArgs e) { }
+        private void lblNhaplaimk_Click(object sender, EventArgs e) { }
+        private void lblHoten_Click(object sender, EventArgs e) { }
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e) { }
+        private void guna2TextBox2_TextChanged(object sender, EventArgs e) { }
+        private void txtVaitro_SelectedIndexChanged(object sender, EventArgs e) { }
+        private void cboGioitinh_SelectedIndexChanged(object sender, EventArgs e) { }
+        private void lblDangky_Click(object sender, EventArgs e) { }
     }
 }

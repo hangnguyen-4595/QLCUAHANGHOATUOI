@@ -1,4 +1,4 @@
-﻿namespace QLCUAHANGHOATUOI.All_User_control
+﻿namespace QLCUAHANGHOATUOI.GUI
 {
     partial class UC_Khachhang
     {
@@ -40,17 +40,17 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.pnlSanpham = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtDiaChi = new System.Windows.Forms.TextBox();
+            this.txtSDT = new System.Windows.Forms.TextBox();
+            this.lblDiachi = new System.Windows.Forms.Label();
             this.btnXoa = new Guna.UI2.WinForms.Guna2Button();
             this.btnSua = new Guna.UI2.WinForms.Guna2Button();
             this.btnThem = new Guna.UI2.WinForms.Guna2Button();
-            this.txtTensp = new System.Windows.Forms.TextBox();
-            this.txtMasp = new System.Windows.Forms.TextBox();
+            this.txtTenKH = new System.Windows.Forms.TextBox();
+            this.txtMaKH = new System.Windows.Forms.TextBox();
             this.lblTenkh = new System.Windows.Forms.Label();
             this.lblSdt = new System.Windows.Forms.Label();
             this.lblMakh = new System.Windows.Forms.Label();
-            this.lblDiachi = new System.Windows.Forms.Label();
-            this.txtSdt = new System.Windows.Forms.TextBox();
-            this.txtDiachi = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachhang)).BeginInit();
             this.pnlSanpham.SuspendLayout();
             this.SuspendLayout();
@@ -61,7 +61,7 @@
             this.lblKhachhang.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblKhachhang.Location = new System.Drawing.Point(88, 60);
             this.lblKhachhang.Name = "lblKhachhang";
-            this.lblKhachhang.Size = new System.Drawing.Size(256, 39);
+            this.lblKhachhang.Size = new System.Drawing.Size(248, 38);
             this.lblKhachhang.TabIndex = 0;
             this.lblKhachhang.Text = "KHÁCH HÀNG";
             // 
@@ -120,6 +120,7 @@
             this.dgvKhachhang.ThemeStyle.RowsStyle.Height = 24;
             this.dgvKhachhang.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvKhachhang.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvKhachhang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKhachhang_CellContentClick);
             // 
             // Column1
             // 
@@ -148,14 +149,14 @@
             // pnlSanpham
             // 
             this.pnlSanpham.BackColor = System.Drawing.SystemColors.Window;
-            this.pnlSanpham.Controls.Add(this.txtDiachi);
-            this.pnlSanpham.Controls.Add(this.txtSdt);
+            this.pnlSanpham.Controls.Add(this.txtDiaChi);
+            this.pnlSanpham.Controls.Add(this.txtSDT);
             this.pnlSanpham.Controls.Add(this.lblDiachi);
             this.pnlSanpham.Controls.Add(this.btnXoa);
             this.pnlSanpham.Controls.Add(this.btnSua);
             this.pnlSanpham.Controls.Add(this.btnThem);
-            this.pnlSanpham.Controls.Add(this.txtTensp);
-            this.pnlSanpham.Controls.Add(this.txtMasp);
+            this.pnlSanpham.Controls.Add(this.txtTenKH);
+            this.pnlSanpham.Controls.Add(this.txtMaKH);
             this.pnlSanpham.Controls.Add(this.lblTenkh);
             this.pnlSanpham.Controls.Add(this.lblSdt);
             this.pnlSanpham.Controls.Add(this.lblMakh);
@@ -163,6 +164,32 @@
             this.pnlSanpham.Name = "pnlSanpham";
             this.pnlSanpham.Size = new System.Drawing.Size(587, 495);
             this.pnlSanpham.TabIndex = 2;
+            // 
+            // txtDiaChi
+            // 
+            this.txtDiaChi.Location = new System.Drawing.Point(201, 261);
+            this.txtDiaChi.Multiline = true;
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.Size = new System.Drawing.Size(303, 35);
+            this.txtDiaChi.TabIndex = 128;
+            // 
+            // txtSDT
+            // 
+            this.txtSDT.Location = new System.Drawing.Point(201, 195);
+            this.txtSDT.Multiline = true;
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Size = new System.Drawing.Size(303, 35);
+            this.txtSDT.TabIndex = 127;
+            // 
+            // lblDiachi
+            // 
+            this.lblDiachi.AutoSize = true;
+            this.lblDiachi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiachi.Location = new System.Drawing.Point(49, 261);
+            this.lblDiachi.Name = "lblDiachi";
+            this.lblDiachi.Size = new System.Drawing.Size(97, 29);
+            this.lblDiachi.TabIndex = 126;
+            this.lblDiachi.Text = "Địa Chỉ:";
             // 
             // btnXoa
             // 
@@ -180,6 +207,7 @@
             this.btnXoa.Size = new System.Drawing.Size(127, 47);
             this.btnXoa.TabIndex = 125;
             this.btnXoa.Text = "XOÁ";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click_1);
             // 
             // btnSua
             // 
@@ -197,6 +225,7 @@
             this.btnSua.Size = new System.Drawing.Size(127, 45);
             this.btnSua.TabIndex = 124;
             this.btnSua.Text = "SỬA";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click_1);
             // 
             // btnThem
             // 
@@ -214,22 +243,23 @@
             this.btnThem.Size = new System.Drawing.Size(127, 45);
             this.btnThem.TabIndex = 123;
             this.btnThem.Text = "THÊM";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click_1);
             // 
-            // txtTensp
+            // txtTenKH
             // 
-            this.txtTensp.Location = new System.Drawing.Point(201, 125);
-            this.txtTensp.Multiline = true;
-            this.txtTensp.Name = "txtTensp";
-            this.txtTensp.Size = new System.Drawing.Size(303, 35);
-            this.txtTensp.TabIndex = 10;
+            this.txtTenKH.Location = new System.Drawing.Point(201, 125);
+            this.txtTenKH.Multiline = true;
+            this.txtTenKH.Name = "txtTenKH";
+            this.txtTenKH.Size = new System.Drawing.Size(303, 35);
+            this.txtTenKH.TabIndex = 10;
             // 
-            // txtMasp
+            // txtMaKH
             // 
-            this.txtMasp.Location = new System.Drawing.Point(201, 60);
-            this.txtMasp.Multiline = true;
-            this.txtMasp.Name = "txtMasp";
-            this.txtMasp.Size = new System.Drawing.Size(303, 35);
-            this.txtMasp.TabIndex = 9;
+            this.txtMaKH.Location = new System.Drawing.Point(201, 60);
+            this.txtMaKH.Multiline = true;
+            this.txtMaKH.Name = "txtMaKH";
+            this.txtMaKH.Size = new System.Drawing.Size(303, 35);
+            this.txtMaKH.TabIndex = 9;
             // 
             // lblTenkh
             // 
@@ -261,32 +291,6 @@
             this.lblMakh.TabIndex = 0;
             this.lblMakh.Text = "Mã KH:";
             // 
-            // lblDiachi
-            // 
-            this.lblDiachi.AutoSize = true;
-            this.lblDiachi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiachi.Location = new System.Drawing.Point(49, 261);
-            this.lblDiachi.Name = "lblDiachi";
-            this.lblDiachi.Size = new System.Drawing.Size(97, 29);
-            this.lblDiachi.TabIndex = 126;
-            this.lblDiachi.Text = "Địa Chỉ:";
-            // 
-            // txtSdt
-            // 
-            this.txtSdt.Location = new System.Drawing.Point(201, 195);
-            this.txtSdt.Multiline = true;
-            this.txtSdt.Name = "txtSdt";
-            this.txtSdt.Size = new System.Drawing.Size(303, 35);
-            this.txtSdt.TabIndex = 127;
-            // 
-            // txtDiachi
-            // 
-            this.txtDiachi.Location = new System.Drawing.Point(201, 261);
-            this.txtDiachi.Multiline = true;
-            this.txtDiachi.Name = "txtDiachi";
-            this.txtDiachi.Size = new System.Drawing.Size(303, 35);
-            this.txtDiachi.TabIndex = 128;
-            // 
             // UC_Khachhang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -315,16 +319,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private Guna.UI2.WinForms.Guna2Panel pnlSanpham;
-        private System.Windows.Forms.TextBox txtSdt;
+        private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.Label lblDiachi;
         private Guna.UI2.WinForms.Guna2Button btnXoa;
         private Guna.UI2.WinForms.Guna2Button btnSua;
         private Guna.UI2.WinForms.Guna2Button btnThem;
-        private System.Windows.Forms.TextBox txtTensp;
-        private System.Windows.Forms.TextBox txtMasp;
+        private System.Windows.Forms.TextBox txtTenKH;
+        private System.Windows.Forms.TextBox txtMaKH;
         private System.Windows.Forms.Label lblTenkh;
         private System.Windows.Forms.Label lblSdt;
         private System.Windows.Forms.Label lblMakh;
-        private System.Windows.Forms.TextBox txtDiachi;
+        private System.Windows.Forms.TextBox txtDiaChi;
     }
 }
