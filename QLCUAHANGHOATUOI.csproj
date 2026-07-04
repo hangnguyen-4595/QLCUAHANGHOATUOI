@@ -58,6 +58,48 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="All User control\UC_Hoadon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="All User control\UC_Hoadon.Designer.cs">
+      <DependentUpon>UC_Hoadon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="All User control\UC_Khachhang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="All User control\UC_Khachhang.Designer.cs">
+      <DependentUpon>UC_Khachhang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="All User control\UC_Nhanvien1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="All User control\UC_Nhanvien1.Designer.cs">
+      <DependentUpon>UC_Nhanvien1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="All User control\UC_Sanpham.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="All User control\UC_Sanpham.Designer.cs">
+      <DependentUpon>UC_Sanpham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="All User control\UC_ThanhtoanNV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="All User control\UC_ThanhtoanNV.Designer.cs">
+      <DependentUpon>UC_ThanhtoanNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="All User control\UC_Thongke.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="All User control\UC_Thongke.Designer.cs">
+      <DependentUpon>UC_Thongke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="All User control\UC_TongquanNV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="All User control\UC_TongquanNV.Designer.cs">
+      <DependentUpon>UC_TongquanNV.cs</DependentUpon>
+    </Compile>
     <Compile Include="All User control\UC_Trangchu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -88,12 +130,6 @@
     <Compile Include="GUI\frmHoadon.Designer.cs">
       <DependentUpon>frmHoadon.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmKhachang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\frmKhachang.Designer.cs">
-      <DependentUpon>frmKhachang.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\frmManchinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,18 +141,6 @@
     </Compile>
     <Compile Include="GUI\frmNhanvien.Designer.cs">
       <DependentUpon>frmNhanvien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\frmQLNV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\frmQLNV.Designer.cs">
-      <DependentUpon>frmQLNV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\frmSanpham.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\frmSanpham.Designer.cs">
-      <DependentUpon>frmSanpham.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmSanphamNV.cs">
       <SubType>Form</SubType>
@@ -130,6 +154,12 @@
     <Compile Include="GUI\frmTaikhoan.Designer.cs">
       <DependentUpon>frmTaikhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmThongtinnv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmThongtinnv.Designer.cs">
+      <DependentUpon>frmThongtinnv.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmTrangchu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,12 +171,28 @@
     <Compile Include="GUI\TaiKhoanManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UC_QLSP\UC_QLSP.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC_QLSP\UC_QLSP.Designer.cs">
-      <DependentUpon>UC_QLSP.cs</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="All User control\UC_Hoadon.resx">
+      <DependentUpon>UC_Hoadon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="All User control\UC_Khachhang.resx">
+      <DependentUpon>UC_Khachhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="All User control\UC_Nhanvien1.resx">
+      <DependentUpon>UC_Nhanvien1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="All User control\UC_Sanpham.resx">
+      <DependentUpon>UC_Sanpham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="All User control\UC_ThanhtoanNV.resx">
+      <DependentUpon>UC_ThanhtoanNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="All User control\UC_Thongke.resx">
+      <DependentUpon>UC_Thongke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="All User control\UC_TongquanNV.resx">
+      <DependentUpon>UC_TongquanNV.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="All User control\UC_Trangchu.resx">
       <DependentUpon>UC_Trangchu.cs</DependentUpon>
     </EmbeddedResource>
@@ -159,20 +205,11 @@
     <EmbeddedResource Include="GUI\frmHoadon.resx">
       <DependentUpon>frmHoadon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmKhachang.resx">
-      <DependentUpon>frmKhachang.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmManchinh.resx">
       <DependentUpon>frmManchinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmNhanvien.resx">
       <DependentUpon>frmNhanvien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmQLNV.resx">
-      <DependentUpon>frmQLNV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmSanpham.resx">
-      <DependentUpon>frmSanpham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmSanphamNV.resx">
       <DependentUpon>frmSanphamNV.cs</DependentUpon>
@@ -180,27 +217,27 @@
     <EmbeddedResource Include="GUI\frmTaikhoan.resx">
       <DependentUpon>frmTaikhoan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmThongtinnv.resx">
+      <DependentUpon>frmThongtinnv.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmTrangchu.resx">
       <DependentUpon>frmTrangchu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <EmbeddedResource Include="UC_QLSP\UC_QLSP.resx">
-      <DependentUpon>UC_QLSP.cs</DependentUpon>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -211,7 +248,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BUS\" />
     <Folder Include="DAL\" />
     <Folder Include="Database\" />
     <Folder Include="DTO\" />
@@ -221,6 +257,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />
+    <Content Include="Resources\anh1.jpg" />
+    <Content Include="Resources\anh10.jpg" />
+    <Content Include="Resources\anh2.jpg" />
+    <Content Include="Resources\anh3.jpg" />
+    <Content Include="Resources\anh4.jpg" />
+    <Content Include="Resources\anh5.jpg" />
+    <Content Include="Resources\anh6.jpg" />
+    <Content Include="Resources\anh7.jpg" />
+    <Content Include="Resources\anh8.jpg" />
+    <Content Include="Resources\anh9.jpg" />
     <None Include="Resources\ảnh.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

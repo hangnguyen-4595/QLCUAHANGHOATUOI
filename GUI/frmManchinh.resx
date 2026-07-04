@@ -27029,7 +27029,7 @@
   <data name="ptbLogo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAALAAAAAzCAYAAAA3k4IoAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAMbxJREFUeF7tfQd3XNd5rf/CKy5K4rdW8hyvZDnNKU78/Nyk2E4s27IsyyW2JEtW
+        vAAADrwBlbxySQAAMbxJREFUeF7tfQd3XNd5rf/CKy5K4rdW8hyvZDnNKU78/Nyk2E4s27IsyyW2JEtW
         lyixgiAJsPdeRbGInUTvvRAYDNqg914HZdBmMJjeZ7+1vzsHuIREmYmT6Cnmh3XWzNxy7rn37vOd/ZVz
         8Ak8lIfyMZZPAFEAkVjh93uFW9QR2nf+6Q+IxkoE0WgYiAaBaAAASxBACJDtkeVj+XHPqe+78vvboUQd
         q7VDa4u+RFi/+q2vJnat5Z/SDm2D/lOVSIR3/H7hdv1xDyIPctyHXZOir+Nfc305Rj2M2IOJRlY9DL0s
@@ -33419,4 +33419,19 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
 </value>
   </data>
+  <metadata name="guna2Elipse2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>161, 17</value>
+  </metadata>
+  <metadata name="guna2Elipse3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>305, 17</value>
+  </metadata>
+  <metadata name="guna2Elipse4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>449, 17</value>
+  </metadata>
+  <metadata name="guna2Elipse5.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>593, 17</value>
+  </metadata>
+  <metadata name="guna2Elipse6.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>737, 17</value>
+  </metadata>
 </root>

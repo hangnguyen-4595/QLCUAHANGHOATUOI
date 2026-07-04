@@ -26,5 +26,10 @@ namespace QLCUAHANGHOATUOI.All_User_control
         {
 
         }
+
+        private void UC_Trangchu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

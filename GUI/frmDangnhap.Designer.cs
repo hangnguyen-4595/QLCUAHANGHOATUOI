@@ -147,6 +147,7 @@
             this.btnDangnhap.Size = new System.Drawing.Size(195, 59);
             this.btnDangnhap.TabIndex = 20;
             this.btnDangnhap.Text = "Đăng Nhập";
+            this.btnDangnhap.Click += new System.EventHandler(this.btnDangnhap_Click);
             // 
             // btnDangky
             // 
@@ -188,6 +189,7 @@
             // 
             // frmDangnhap
             // 
+            this.AcceptButton = this.btnDangnhap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLCUAHANGHOATUOI.All_User_control;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,12 +16,6 @@ namespace QLCUAHANGHOATUOI.GUI
         public frmNhanvien()
         {
             InitializeComponent();
-        }
-
-        private void btnSanpham_Click(object sender, EventArgs e)
-        {
-            frmKhachang frm = new frmKhachang();
-            frm.ShowDialog();
         }
 
         private void btnHoadon_Click(object sender, EventArgs e)
@@ -53,6 +48,12 @@ namespace QLCUAHANGHOATUOI.GUI
         private void pnlMain_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnTrangchu_Click(object sender, EventArgs e)
+        {
+            uC_TongquanNV1.Visible = true;
+            uC_TongquanNV1.BringToFront();
         }
     }
 }

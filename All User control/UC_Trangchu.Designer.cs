@@ -34,11 +34,11 @@
             System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Trangchu));
             this.pnlHomnay = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblHomnay = new System.Windows.Forms.Label();
-            this.lblDoanhthu = new System.Windows.Forms.Label();
-            this.lblDonhang = new System.Windows.Forms.Label();
-            this.lblSodoanhthu = new System.Windows.Forms.Label();
             this.lblSodonhang = new System.Windows.Forms.Label();
+            this.lblSodoanhthu = new System.Windows.Forms.Label();
+            this.lblDonhang = new System.Windows.Forms.Label();
+            this.lblDoanhthu = new System.Windows.Forms.Label();
+            this.lblHomnay = new System.Windows.Forms.Label();
             this.pnlCanhbao = new Guna.UI2.WinForms.Guna2Panel();
             this.lblSoluonghet = new System.Windows.Forms.Label();
             this.lblSoluongsaphet = new System.Windows.Forms.Label();
@@ -51,36 +51,36 @@
             this.lblHoatdong = new System.Windows.Forms.Label();
             this.chrXuhuongban = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pnlMauhoa = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblMauhoaban = new System.Windows.Forms.Label();
-            this.pnlHoa1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.ptbGiohoa = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.lblTengiohoa = new System.Windows.Forms.Label();
-            this.lblGiasinhnhat = new System.Windows.Forms.Label();
-            this.lblGiahuongduong = new System.Windows.Forms.Label();
-            this.lblTenbohoa = new System.Windows.Forms.Label();
-            this.ptbHoahuongduong = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.pnlHoa2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblGiasophia = new System.Windows.Forms.Label();
-            this.lblSophia = new System.Windows.Forms.Label();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.pnlHoa3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlHoa4 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblGialanghoa = new System.Windows.Forms.Label();
             this.lblLanghoa = new System.Windows.Forms.Label();
+            this.pnlHoa3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblGiasophia = new System.Windows.Forms.Label();
+            this.lblSophia = new System.Windows.Forms.Label();
+            this.pnlHoa2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblGiahuongduong = new System.Windows.Forms.Label();
+            this.lblTenbohoa = new System.Windows.Forms.Label();
+            this.pnlHoa1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblGiasinhnhat = new System.Windows.Forms.Label();
+            this.lblTengiohoa = new System.Windows.Forms.Label();
+            this.lblMauhoaban = new System.Windows.Forms.Label();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.pnlHoa4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.ptbHoahuongduong = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.ptbGiohoa = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnlHomnay.SuspendLayout();
             this.pnlCanhbao.SuspendLayout();
             this.pnlHoatdong.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chrXuhuongban)).BeginInit();
             this.pnlMauhoa.SuspendLayout();
-            this.pnlHoa1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbGiohoa)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbHoahuongduong)).BeginInit();
-            this.pnlHoa2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
-            this.pnlHoa3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.pnlHoa4.SuspendLayout();
+            this.pnlHoa3.SuspendLayout();
+            this.pnlHoa2.SuspendLayout();
+            this.pnlHoa1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbHoahuongduong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbGiohoa)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHomnay
@@ -101,35 +101,15 @@
             this.pnlHomnay.Size = new System.Drawing.Size(334, 218);
             this.pnlHomnay.TabIndex = 0;
             // 
-            // lblHomnay
+            // lblSodonhang
             // 
-            this.lblHomnay.AutoSize = true;
-            this.lblHomnay.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHomnay.Location = new System.Drawing.Point(62, 34);
-            this.lblHomnay.Name = "lblHomnay";
-            this.lblHomnay.Size = new System.Drawing.Size(192, 32);
-            this.lblHomnay.TabIndex = 0;
-            this.lblHomnay.Text = "📅 HÔM NAY";
-            // 
-            // lblDoanhthu
-            // 
-            this.lblDoanhthu.AutoSize = true;
-            this.lblDoanhthu.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDoanhthu.Location = new System.Drawing.Point(18, 93);
-            this.lblDoanhthu.Name = "lblDoanhthu";
-            this.lblDoanhthu.Size = new System.Drawing.Size(133, 29);
-            this.lblDoanhthu.TabIndex = 1;
-            this.lblDoanhthu.Text = "Doanh thu :";
-            // 
-            // lblDonhang
-            // 
-            this.lblDonhang.AutoSize = true;
-            this.lblDonhang.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDonhang.Location = new System.Drawing.Point(18, 143);
-            this.lblDonhang.Name = "lblDonhang";
-            this.lblDonhang.Size = new System.Drawing.Size(122, 29);
-            this.lblDonhang.TabIndex = 2;
-            this.lblDonhang.Text = "Đơn hàng:";
+            this.lblSodonhang.AutoSize = true;
+            this.lblSodonhang.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSodonhang.Location = new System.Drawing.Point(163, 143);
+            this.lblSodonhang.Name = "lblSodonhang";
+            this.lblSodonhang.Size = new System.Drawing.Size(39, 29);
+            this.lblSodonhang.TabIndex = 4;
+            this.lblSodonhang.Text = "20";
             // 
             // lblSodoanhthu
             // 
@@ -141,15 +121,35 @@
             this.lblSodoanhthu.TabIndex = 3;
             this.lblSodoanhthu.Text = "190.000";
             // 
-            // lblSodonhang
+            // lblDonhang
             // 
-            this.lblSodonhang.AutoSize = true;
-            this.lblSodonhang.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSodonhang.Location = new System.Drawing.Point(163, 143);
-            this.lblSodonhang.Name = "lblSodonhang";
-            this.lblSodonhang.Size = new System.Drawing.Size(39, 29);
-            this.lblSodonhang.TabIndex = 4;
-            this.lblSodonhang.Text = "20";
+            this.lblDonhang.AutoSize = true;
+            this.lblDonhang.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDonhang.Location = new System.Drawing.Point(18, 143);
+            this.lblDonhang.Name = "lblDonhang";
+            this.lblDonhang.Size = new System.Drawing.Size(122, 29);
+            this.lblDonhang.TabIndex = 2;
+            this.lblDonhang.Text = "Đơn hàng:";
+            // 
+            // lblDoanhthu
+            // 
+            this.lblDoanhthu.AutoSize = true;
+            this.lblDoanhthu.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDoanhthu.Location = new System.Drawing.Point(18, 93);
+            this.lblDoanhthu.Name = "lblDoanhthu";
+            this.lblDoanhthu.Size = new System.Drawing.Size(133, 29);
+            this.lblDoanhthu.TabIndex = 1;
+            this.lblDoanhthu.Text = "Doanh thu :";
+            // 
+            // lblHomnay
+            // 
+            this.lblHomnay.AutoSize = true;
+            this.lblHomnay.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHomnay.Location = new System.Drawing.Point(62, 34);
+            this.lblHomnay.Name = "lblHomnay";
+            this.lblHomnay.Size = new System.Drawing.Size(192, 32);
+            this.lblHomnay.TabIndex = 0;
+            this.lblHomnay.Text = "📅 HÔM NAY";
             // 
             // pnlCanhbao
             // 
@@ -313,154 +313,17 @@
             this.pnlMauhoa.Size = new System.Drawing.Size(786, 564);
             this.pnlMauhoa.TabIndex = 7;
             // 
-            // lblMauhoaban
+            // pnlHoa4
             // 
-            this.lblMauhoaban.AutoSize = true;
-            this.lblMauhoaban.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMauhoaban.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblMauhoaban.Location = new System.Drawing.Point(85, 27);
-            this.lblMauhoaban.Name = "lblMauhoaban";
-            this.lblMauhoaban.Size = new System.Drawing.Size(398, 32);
-            this.lblMauhoaban.TabIndex = 0;
-            this.lblMauhoaban.Text = "MẪU HOA BÁN CHẠY NHẤT";
-            // 
-            // pnlHoa1
-            // 
-            this.pnlHoa1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.pnlHoa1.Controls.Add(this.lblGiasinhnhat);
-            this.pnlHoa1.Controls.Add(this.lblTengiohoa);
-            this.pnlHoa1.Controls.Add(this.ptbGiohoa);
-            this.pnlHoa1.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.pnlHoa1.Location = new System.Drawing.Point(64, 82);
-            this.pnlHoa1.Name = "pnlHoa1";
-            this.pnlHoa1.Size = new System.Drawing.Size(264, 215);
-            this.pnlHoa1.TabIndex = 1;
-            // 
-            // ptbGiohoa
-            // 
-            this.ptbGiohoa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ptbGiohoa.BackgroundImage")));
-            this.ptbGiohoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ptbGiohoa.Image = ((System.Drawing.Image)(resources.GetObject("ptbGiohoa.Image")));
-            this.ptbGiohoa.ImageRotate = 0F;
-            this.ptbGiohoa.Location = new System.Drawing.Point(0, 0);
-            this.ptbGiohoa.Name = "ptbGiohoa";
-            this.ptbGiohoa.Size = new System.Drawing.Size(264, 156);
-            this.ptbGiohoa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbGiohoa.TabIndex = 0;
-            this.ptbGiohoa.TabStop = false;
-            // 
-            // lblTengiohoa
-            // 
-            this.lblTengiohoa.AutoSize = true;
-            this.lblTengiohoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTengiohoa.Location = new System.Drawing.Point(-4, 159);
-            this.lblTengiohoa.Name = "lblTengiohoa";
-            this.lblTengiohoa.Size = new System.Drawing.Size(205, 22);
-            this.lblTengiohoa.TabIndex = 1;
-            this.lblTengiohoa.Text = "GIỎ HOA SINH NHẬT";
-            // 
-            // lblGiasinhnhat
-            // 
-            this.lblGiasinhnhat.AutoSize = true;
-            this.lblGiasinhnhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGiasinhnhat.ForeColor = System.Drawing.Color.Orange;
-            this.lblGiasinhnhat.Location = new System.Drawing.Point(3, 195);
-            this.lblGiasinhnhat.Name = "lblGiasinhnhat";
-            this.lblGiasinhnhat.Size = new System.Drawing.Size(79, 20);
-            this.lblGiasinhnhat.TabIndex = 2;
-            this.lblGiasinhnhat.Text = "120.000Đ";
-            // 
-            // lblGiahuongduong
-            // 
-            this.lblGiahuongduong.AutoSize = true;
-            this.lblGiahuongduong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGiahuongduong.ForeColor = System.Drawing.Color.Orange;
-            this.lblGiahuongduong.Location = new System.Drawing.Point(3, 195);
-            this.lblGiahuongduong.Name = "lblGiahuongduong";
-            this.lblGiahuongduong.Size = new System.Drawing.Size(79, 20);
-            this.lblGiahuongduong.TabIndex = 2;
-            this.lblGiahuongduong.Text = "110.000Đ";
-            // 
-            // lblTenbohoa
-            // 
-            this.lblTenbohoa.AutoSize = true;
-            this.lblTenbohoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenbohoa.Location = new System.Drawing.Point(-4, 159);
-            this.lblTenbohoa.Name = "lblTenbohoa";
-            this.lblTenbohoa.Size = new System.Drawing.Size(242, 22);
-            this.lblTenbohoa.TabIndex = 1;
-            this.lblTenbohoa.Text = "BÓ HOA HƯỚNG DƯƠNG";
-            // 
-            // ptbHoahuongduong
-            // 
-            this.ptbHoahuongduong.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ptbHoahuongduong.BackgroundImage")));
-            this.ptbHoahuongduong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ptbHoahuongduong.Image = ((System.Drawing.Image)(resources.GetObject("ptbHoahuongduong.Image")));
-            this.ptbHoahuongduong.ImageRotate = 0F;
-            this.ptbHoahuongduong.Location = new System.Drawing.Point(0, 0);
-            this.ptbHoahuongduong.Name = "ptbHoahuongduong";
-            this.ptbHoahuongduong.Size = new System.Drawing.Size(264, 156);
-            this.ptbHoahuongduong.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbHoahuongduong.TabIndex = 0;
-            this.ptbHoahuongduong.TabStop = false;
-            // 
-            // pnlHoa2
-            // 
-            this.pnlHoa2.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.pnlHoa2.Controls.Add(this.lblGiahuongduong);
-            this.pnlHoa2.Controls.Add(this.lblTenbohoa);
-            this.pnlHoa2.Controls.Add(this.ptbHoahuongduong);
-            this.pnlHoa2.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.pnlHoa2.Location = new System.Drawing.Point(442, 82);
-            this.pnlHoa2.Name = "pnlHoa2";
-            this.pnlHoa2.Size = new System.Drawing.Size(264, 215);
-            this.pnlHoa2.TabIndex = 2;
-            // 
-            // lblGiasophia
-            // 
-            this.lblGiasophia.AutoSize = true;
-            this.lblGiasophia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGiasophia.ForeColor = System.Drawing.Color.Orange;
-            this.lblGiasophia.Location = new System.Drawing.Point(3, 195);
-            this.lblGiasophia.Name = "lblGiasophia";
-            this.lblGiasophia.Size = new System.Drawing.Size(79, 20);
-            this.lblGiasophia.TabIndex = 2;
-            this.lblGiasophia.Text = "320.000Đ";
-            // 
-            // lblSophia
-            // 
-            this.lblSophia.AutoSize = true;
-            this.lblSophia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSophia.Location = new System.Drawing.Point(-4, 159);
-            this.lblSophia.Name = "lblSophia";
-            this.lblSophia.Size = new System.Drawing.Size(194, 22);
-            this.lblSophia.TabIndex = 1;
-            this.lblSophia.Text = "HOA CHÙM SOPHIA";
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.BackgroundImage")));
-            this.guna2PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(264, 156);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox2.TabIndex = 0;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // pnlHoa3
-            // 
-            this.pnlHoa3.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.pnlHoa3.Controls.Add(this.lblGiasophia);
-            this.pnlHoa3.Controls.Add(this.lblSophia);
-            this.pnlHoa3.Controls.Add(this.guna2PictureBox2);
-            this.pnlHoa3.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.pnlHoa3.Location = new System.Drawing.Point(64, 332);
-            this.pnlHoa3.Name = "pnlHoa3";
-            this.pnlHoa3.Size = new System.Drawing.Size(264, 215);
-            this.pnlHoa3.TabIndex = 3;
+            this.pnlHoa4.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.pnlHoa4.Controls.Add(this.lblGialanghoa);
+            this.pnlHoa4.Controls.Add(this.lblLanghoa);
+            this.pnlHoa4.Controls.Add(this.guna2PictureBox3);
+            this.pnlHoa4.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.pnlHoa4.Location = new System.Drawing.Point(442, 332);
+            this.pnlHoa4.Name = "pnlHoa4";
+            this.pnlHoa4.Size = new System.Drawing.Size(264, 215);
+            this.pnlHoa4.TabIndex = 4;
             // 
             // lblGialanghoa
             // 
@@ -483,6 +346,116 @@
             this.lblLanghoa.TabIndex = 1;
             this.lblLanghoa.Text = "LÃNG HOA HỒNG KHAI TRƯƠNG";
             // 
+            // pnlHoa3
+            // 
+            this.pnlHoa3.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.pnlHoa3.Controls.Add(this.lblGiasophia);
+            this.pnlHoa3.Controls.Add(this.lblSophia);
+            this.pnlHoa3.Controls.Add(this.guna2PictureBox2);
+            this.pnlHoa3.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.pnlHoa3.Location = new System.Drawing.Point(64, 332);
+            this.pnlHoa3.Name = "pnlHoa3";
+            this.pnlHoa3.Size = new System.Drawing.Size(264, 215);
+            this.pnlHoa3.TabIndex = 3;
+            // 
+            // lblGiasophia
+            // 
+            this.lblGiasophia.AutoSize = true;
+            this.lblGiasophia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGiasophia.ForeColor = System.Drawing.Color.Orange;
+            this.lblGiasophia.Location = new System.Drawing.Point(3, 195);
+            this.lblGiasophia.Name = "lblGiasophia";
+            this.lblGiasophia.Size = new System.Drawing.Size(79, 20);
+            this.lblGiasophia.TabIndex = 2;
+            this.lblGiasophia.Text = "320.000Đ";
+            // 
+            // lblSophia
+            // 
+            this.lblSophia.AutoSize = true;
+            this.lblSophia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSophia.Location = new System.Drawing.Point(-4, 159);
+            this.lblSophia.Name = "lblSophia";
+            this.lblSophia.Size = new System.Drawing.Size(194, 22);
+            this.lblSophia.TabIndex = 1;
+            this.lblSophia.Text = "HOA CHÙM SOPHIA";
+            // 
+            // pnlHoa2
+            // 
+            this.pnlHoa2.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.pnlHoa2.Controls.Add(this.lblGiahuongduong);
+            this.pnlHoa2.Controls.Add(this.lblTenbohoa);
+            this.pnlHoa2.Controls.Add(this.ptbHoahuongduong);
+            this.pnlHoa2.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.pnlHoa2.Location = new System.Drawing.Point(442, 82);
+            this.pnlHoa2.Name = "pnlHoa2";
+            this.pnlHoa2.Size = new System.Drawing.Size(264, 215);
+            this.pnlHoa2.TabIndex = 2;
+            // 
+            // lblGiahuongduong
+            // 
+            this.lblGiahuongduong.AutoSize = true;
+            this.lblGiahuongduong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGiahuongduong.ForeColor = System.Drawing.Color.Orange;
+            this.lblGiahuongduong.Location = new System.Drawing.Point(3, 195);
+            this.lblGiahuongduong.Name = "lblGiahuongduong";
+            this.lblGiahuongduong.Size = new System.Drawing.Size(79, 20);
+            this.lblGiahuongduong.TabIndex = 2;
+            this.lblGiahuongduong.Text = "110.000Đ";
+            // 
+            // lblTenbohoa
+            // 
+            this.lblTenbohoa.AutoSize = true;
+            this.lblTenbohoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenbohoa.Location = new System.Drawing.Point(-4, 159);
+            this.lblTenbohoa.Name = "lblTenbohoa";
+            this.lblTenbohoa.Size = new System.Drawing.Size(242, 22);
+            this.lblTenbohoa.TabIndex = 1;
+            this.lblTenbohoa.Text = "BÓ HOA HƯỚNG DƯƠNG";
+            // 
+            // pnlHoa1
+            // 
+            this.pnlHoa1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.pnlHoa1.Controls.Add(this.lblGiasinhnhat);
+            this.pnlHoa1.Controls.Add(this.lblTengiohoa);
+            this.pnlHoa1.Controls.Add(this.ptbGiohoa);
+            this.pnlHoa1.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.pnlHoa1.Location = new System.Drawing.Point(64, 82);
+            this.pnlHoa1.Name = "pnlHoa1";
+            this.pnlHoa1.Size = new System.Drawing.Size(264, 215);
+            this.pnlHoa1.TabIndex = 1;
+            // 
+            // lblGiasinhnhat
+            // 
+            this.lblGiasinhnhat.AutoSize = true;
+            this.lblGiasinhnhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGiasinhnhat.ForeColor = System.Drawing.Color.Orange;
+            this.lblGiasinhnhat.Location = new System.Drawing.Point(3, 195);
+            this.lblGiasinhnhat.Name = "lblGiasinhnhat";
+            this.lblGiasinhnhat.Size = new System.Drawing.Size(79, 20);
+            this.lblGiasinhnhat.TabIndex = 2;
+            this.lblGiasinhnhat.Text = "120.000Đ";
+            // 
+            // lblTengiohoa
+            // 
+            this.lblTengiohoa.AutoSize = true;
+            this.lblTengiohoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTengiohoa.Location = new System.Drawing.Point(-4, 159);
+            this.lblTengiohoa.Name = "lblTengiohoa";
+            this.lblTengiohoa.Size = new System.Drawing.Size(205, 22);
+            this.lblTengiohoa.TabIndex = 1;
+            this.lblTengiohoa.Text = "GIỎ HOA SINH NHẬT";
+            // 
+            // lblMauhoaban
+            // 
+            this.lblMauhoaban.AutoSize = true;
+            this.lblMauhoaban.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMauhoaban.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblMauhoaban.Location = new System.Drawing.Point(85, 27);
+            this.lblMauhoaban.Name = "lblMauhoaban";
+            this.lblMauhoaban.Size = new System.Drawing.Size(398, 32);
+            this.lblMauhoaban.TabIndex = 0;
+            this.lblMauhoaban.Text = "MẪU HOA BÁN CHẠY NHẤT";
+            // 
             // guna2PictureBox3
             // 
             this.guna2PictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.BackgroundImage")));
@@ -496,17 +469,44 @@
             this.guna2PictureBox3.TabIndex = 0;
             this.guna2PictureBox3.TabStop = false;
             // 
-            // pnlHoa4
+            // guna2PictureBox2
             // 
-            this.pnlHoa4.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.pnlHoa4.Controls.Add(this.lblGialanghoa);
-            this.pnlHoa4.Controls.Add(this.lblLanghoa);
-            this.pnlHoa4.Controls.Add(this.guna2PictureBox3);
-            this.pnlHoa4.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.pnlHoa4.Location = new System.Drawing.Point(442, 332);
-            this.pnlHoa4.Name = "pnlHoa4";
-            this.pnlHoa4.Size = new System.Drawing.Size(264, 215);
-            this.pnlHoa4.TabIndex = 4;
+            this.guna2PictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.BackgroundImage")));
+            this.guna2PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(264, 156);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox2.TabIndex = 0;
+            this.guna2PictureBox2.TabStop = false;
+            // 
+            // ptbHoahuongduong
+            // 
+            this.ptbHoahuongduong.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ptbHoahuongduong.BackgroundImage")));
+            this.ptbHoahuongduong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ptbHoahuongduong.Image = ((System.Drawing.Image)(resources.GetObject("ptbHoahuongduong.Image")));
+            this.ptbHoahuongduong.ImageRotate = 0F;
+            this.ptbHoahuongduong.Location = new System.Drawing.Point(0, 0);
+            this.ptbHoahuongduong.Name = "ptbHoahuongduong";
+            this.ptbHoahuongduong.Size = new System.Drawing.Size(264, 156);
+            this.ptbHoahuongduong.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbHoahuongduong.TabIndex = 0;
+            this.ptbHoahuongduong.TabStop = false;
+            // 
+            // ptbGiohoa
+            // 
+            this.ptbGiohoa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ptbGiohoa.BackgroundImage")));
+            this.ptbGiohoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ptbGiohoa.Image = ((System.Drawing.Image)(resources.GetObject("ptbGiohoa.Image")));
+            this.ptbGiohoa.ImageRotate = 0F;
+            this.ptbGiohoa.Location = new System.Drawing.Point(0, 0);
+            this.ptbGiohoa.Name = "ptbGiohoa";
+            this.ptbGiohoa.Size = new System.Drawing.Size(264, 156);
+            this.ptbGiohoa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbGiohoa.TabIndex = 0;
+            this.ptbGiohoa.TabStop = false;
             // 
             // UC_Trangchu
             // 
@@ -519,6 +519,7 @@
             this.Controls.Add(this.pnlHomnay);
             this.Name = "UC_Trangchu";
             this.Size = new System.Drawing.Size(1621, 886);
+            this.Load += new System.EventHandler(this.UC_Trangchu_Load);
             this.pnlHomnay.ResumeLayout(false);
             this.pnlHomnay.PerformLayout();
             this.pnlCanhbao.ResumeLayout(false);
@@ -528,18 +529,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.chrXuhuongban)).EndInit();
             this.pnlMauhoa.ResumeLayout(false);
             this.pnlMauhoa.PerformLayout();
-            this.pnlHoa1.ResumeLayout(false);
-            this.pnlHoa1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbGiohoa)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbHoahuongduong)).EndInit();
-            this.pnlHoa2.ResumeLayout(false);
-            this.pnlHoa2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
-            this.pnlHoa3.ResumeLayout(false);
-            this.pnlHoa3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.pnlHoa4.ResumeLayout(false);
             this.pnlHoa4.PerformLayout();
+            this.pnlHoa3.ResumeLayout(false);
+            this.pnlHoa3.PerformLayout();
+            this.pnlHoa2.ResumeLayout(false);
+            this.pnlHoa2.PerformLayout();
+            this.pnlHoa1.ResumeLayout(false);
+            this.pnlHoa1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbHoahuongduong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbGiohoa)).EndInit();
             this.ResumeLayout(false);
 
         }

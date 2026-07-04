@@ -17,7 +17,7 @@ namespace QLCUAHANGHOATUOI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmManchinh());
+            Application.Run(new frmNhanvien());
         }
     }
 }
